@@ -1,10 +1,7 @@
 package react.native.component;
 
-#if react_native
-
 @:jsRequire('react-native', 'Navigator')
-extern class Navigator<T>
-{
+extern class Navigator<T> {
 	public function getCurrentRoutes():Array<T>;
 	public function push(route:T):Void;
 	public function pop():Void;
@@ -16,8 +13,7 @@ extern class Navigator<T>
 }
 
 @:jsRequire('react-native', 'Navigator.SceneConfigs')
-extern class NavigatorSceneConfigs
-{
+extern class NavigatorSceneConfigs {
 	public static var PushFromRight;
 	public static var FloatFromRight;
 	public static var FloatFromLeft;
@@ -29,5 +25,3 @@ extern class NavigatorSceneConfigs
 	public static var VerticalUpSwipeJump;
 	public static var VerticalDownSwipeJump;
 }
-
-#end

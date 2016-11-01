@@ -1,17 +1,14 @@
 package react.native.api;
 
-#if react_native
 import js.Promise;
 
 @:jsRequire('react-native', 'CameraRoll')
-extern class CameraRoll
-{
+extern class CameraRoll {
 	public static function getPhotos(params:GetPhotoParams):Promise<GetPhotoResult>;
 }
 
 @:enum
-abstract GroupTypes(String)
-{
+abstract GroupTypes(String) {
 	var GAlbum = 'Album';
 	var GAll = 'All';
 	var GEvent = 'Event';
@@ -22,15 +19,13 @@ abstract GroupTypes(String)
 }
 
 @:enum
-abstract AssetType(String)
-{
+abstract AssetType(String) {
 	var AAll = 'All';
 	var AVideo = 'Video';
 	var APhotos = 'Photos';
 }
 
-typedef GetPhotoParams =
-{
+typedef GetPhotoParams = {
 	first:Int,
 	?after:String,
 	?groupTypes:GroupTypes,
@@ -39,8 +34,7 @@ typedef GetPhotoParams =
 	?mimeTypes:Array<String>,
 }
 
-typedef GetPhotoResult =
-{
+typedef GetPhotoResult = {
 	edges:Array<{
 		node: {
 			timestamp:Float,
@@ -67,5 +61,3 @@ typedef GetPhotoResult =
 		end_cursor:String,
 	}
 }
-
-#end

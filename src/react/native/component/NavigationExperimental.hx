@@ -3,8 +3,6 @@ package react.native.component;
 import haxe.Constraints.Function;
 import react.ReactComponent.ReactElement;
 
-#if react_native
-
 @:jsRequire('react-native', 'NavigationExperimental')
 extern class NavigationExperimental {}
 @:jsRequire('react-native', 'NavigationExperimental.CardStack')
@@ -101,5 +99,3 @@ typedef NavigationTransitionSpec = {
 typedef NavigationAnimationSetter = NavigationAnimatedValue->NavigationState->NavigationState->Void; // (position:NavigationAnimatedValue, newState:NavigationState, lastState:NavigationState) => void;
 
 typedef NavigationSceneRenderer = NavigationSceneRendererProps->ReactElement; // (props: NavigationSceneRendererProps,) => ?ReactElement<any>;
-
-#end
