@@ -1,0 +1,15 @@
+{
+  "name": "react_native",
+  "license": "MIT",
+  "tags": [
+    "react",
+    "native"
+  ],
+  "classPath": "src",
+  "contributors": [
+    "kevinresol"
+  ],
+  "releasenote": "initial release",
+  "version": "0.0.0",
+  "dependencies": {}
+}
