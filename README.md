@@ -1,5 +1,9 @@
 # haxe-react-native
 
+## Note
+
+This library works, but incomplete, as only a portion of the react native component externs has been added. Contributions welcome.
+
 ### Install 
 
 0. haxelib git react https://github.com/massiveinteractive/haxe-react
