@@ -11,6 +11,7 @@ extern class AsyncStorage {
 	static function mergeItem(key:String, value:String, ?callback:Error->Void):Promise<Void>;
 	static function clear(?callback:Error->Array<String>->Void):Promise<Array<String>>;
 	static function flushGetRequests():Void;
+	static function getAllKeys(?callback:Error->Array<String>->Void):Promise<Array<String>>;
 	static function multiGet(keys:Array<String>, ?callback:Array<Error>->Array<Array<String>>->Void):Promise<Array<Array<String>>>;
 	static function multiSet(keyValuePairs:Array<Array<String>>, ?callback:Array<Error>->Void):Promise<Void>;
 	static function multiRemove(keys:Array<String>, ?callback:Array<Error>->Void):Promise<Array<Array<String>>>;
