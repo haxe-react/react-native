@@ -1,12 +1,12 @@
 package react.native.component;
 
 import haxe.Constraints.Function;
-import react.ReactComponent.ReactElement;
+import react.ReactComponent;
 
 @:jsRequire('react-native', 'NavigationExperimental')
 extern class NavigationExperimental {}
 @:jsRequire('react-native', 'NavigationExperimental.CardStack')
-extern class CardStack {}
+extern class CardStack extends ReactComponent {}
 
 // https://github.com/facebook/react-native/blob/3a8c302/Libraries/NavigationExperimental/NavigationStateUtils.js
 @:jsRequire('react-native', 'NavigationExperimental.StateUtils')

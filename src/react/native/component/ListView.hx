@@ -1,7 +1,7 @@
 package react.native.component;
 
 @:jsRequire('react-native', 'ListView')
-extern class ListView {
+extern class ListView extends react.ReactComponent {
 	public inline static var DataSource = ListViewDataSource;
 }
 

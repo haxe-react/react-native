@@ -1,6 +1,6 @@
 package react.native.component;
 
 @:jsRequire('react-native', 'TabBarIOS')
-extern class TabBarIOS {}
+extern class TabBarIOS extends react.ReactComponent {}
 @:jsRequire('react-native', 'TabBarIOS.Item')
-extern class TabBarIOSItem {}
+extern class TabBarIOSItem extends react.ReactComponent {}
