@@ -2,26 +2,26 @@ package react.native.component;
 
 @:jsRequire('react-native', 'Navigator')
 extern class Navigator<T> extends react.ReactComponent {
-	public function getCurrentRoutes():Array<T>;
-	public function push(route:T):Void;
-	public function pop():Void;
-	public function replace(route:T):Void;
-	public function resetTo(route:T):Void;
-	public function jumpBack():Void;
-	public function jumpForward():Void;
-	public function jumpTo(route:T):Void;
+	function getCurrentRoutes():Array<T>;
+	function push(route:T):Void;
+	function pop():Void;
+	function replace(route:T):Void;
+	function resetTo(route:T):Void;
+	function jumpBack():Void;
+	function jumpForward():Void;
+	function jumpTo(route:T):Void;
 }
 
 @:jsRequire('react-native', 'Navigator.SceneConfigs')
 extern class NavigatorSceneConfigs {
-	public static var PushFromRight;
-	public static var FloatFromRight;
-	public static var FloatFromLeft;
-	public static var FloatFromBottom;
-	public static var FloatFromBottomAndroid;
-	public static var FadeAndroid;
-	public static var HorizontalSwipeJump;
-	public static var HorizontalSwipeJumpFromRight;
-	public static var VerticalUpSwipeJump;
-	public static var VerticalDownSwipeJump;
+	static var PushFromRight;
+	static var FloatFromRight;
+	static var FloatFromLeft;
+	static var FloatFromBottom;
+	static var FloatFromBottomAndroid;
+	static var FadeAndroid;
+	static var HorizontalSwipeJump;
+	static var HorizontalSwipeJumpFromRight;
+	static var VerticalUpSwipeJump;
+	static var VerticalDownSwipeJump;
 }

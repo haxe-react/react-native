@@ -4,7 +4,7 @@ import js.Promise;
 
 @:jsRequire('react-native', 'CameraRoll')
 extern class CameraRoll {
-	public static function getPhotos(params:GetPhotoParams):Promise<GetPhotoResult>;
+	static function getPhotos(params:GetPhotoParams):Promise<GetPhotoResult>;
 }
 
 @:enum

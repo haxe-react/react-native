@@ -2,9 +2,9 @@ package react.native.api;
 
 @:jsRequire('react-native', 'StatusBarIOS')
 extern class StatusBarIOS {
-	public static function setStyle(style:StatusBarStyle, ?animated:Bool):Void;
-	public static function setHidden(hidden:Bool, ?animation:String):Void;
-	public static function setNetworkActivityIndicatorVisible(visible:Bool):Void;
+	static function setStyle(style:StatusBarStyle, ?animated:Bool):Void;
+	static function setHidden(hidden:Bool, ?animation:String):Void;
+	static function setNetworkActivityIndicatorVisible(visible:Bool):Void;
 }
 
 /**
