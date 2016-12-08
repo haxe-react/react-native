@@ -1,7 +1,7 @@
 package react.native.component;
 
 @:jsRequire('react-native', 'Navigator')
-extern class Navigator<T> {
+extern class Navigator<T> extends react.ReactComponent {
 	public function getCurrentRoutes():Array<T>;
 	public function push(route:T):Void;
 	public function pop():Void;
