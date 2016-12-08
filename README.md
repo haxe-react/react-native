@@ -7,7 +7,7 @@ This library works, but incomplete, as only a portion of the react native compon
 ### Install 
 
 0. haxelib git react https://github.com/massiveinteractive/haxe-react
-1. haxelib git react_native https://github.com/kevinresol/haxe-react-native
+1. haxelib git react_native https://github.com/haxe-react-native/hxjs-react-native
 
 ### Setup React Native
 
