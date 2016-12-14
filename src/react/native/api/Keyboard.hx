@@ -2,9 +2,9 @@ package react.native.api;
 
 @:jsRequire('react-native', 'Keyboard')
 extern class Keyboard {
-	static function addListener(event:EventName, listener:Dynamic->Void):Void;
-	static function removeListener(event:EventName, listener:Dynamic->Void):Void;
-	static function removeAllListener(event:EventName):Void;
+	static function addListener(event:KeyboardEventName, listener:Dynamic->Void):Void;
+	static function removeListener(event:KeyboardEventName, listener:Dynamic->Void):Void;
+	static function removeAllListener(event:KeyboardEventName):Void;
 	static function dismiss():Void;
 }
 
