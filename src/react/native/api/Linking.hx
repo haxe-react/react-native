@@ -4,11 +4,16 @@ import js.Promise;
 
 @:jsRequire('react-native', 'Linking')
 extern class Linking {
-	static function addEventListener(event:String, listener:LinkingEvent->Void):Void;
-	static function removeEventListener(event:String, listener:LinkingEvent->Void):Void;
+	static function addEventListener(name:LinkingEvengName, listener:LinkingEvent->Void):Void;
+	static function removeEventListener(name:LinkingEvengName, listener:LinkingEvent->Void):Void;
 	static function openURL(url:String):Promise<Void>;
 	static function canOpenURL(url:String):Promise<Bool>;
-	static function getInitialUrl():Promise<String>;
+	static function getInitialURL():Promise<String>;
+}
+
+@:enum
+abstract LinkingEvengName(String) {
+	var Url = 'url';
 }
 
 typedef LinkingEvent = {
