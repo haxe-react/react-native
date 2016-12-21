@@ -7,7 +7,7 @@ import haxe.macro.Expr;
 extern class StyleSheet {
 	@:native('create') @:noCompletion static function _create<T>(obj:Dynamic):Dynamic;
 	
-	static inline macro function create(e:Expr):ExprOf<Dynmaic<Int>> {
+	static inline macro function create(e:Expr):ExprOf<Dynamic<Int>> {
 		switch Context.follow(Context.typeof(e)) {
 			case TAnonymous(_.get() => a):
 				var ct = ComplexType.TAnonymous([for(field in a.fields) {
