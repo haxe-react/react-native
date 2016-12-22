@@ -5,20 +5,20 @@ import haxe.Constraints;
 
 @:jsRequire('react-native', 'NetInfo')
 extern class NetInfo {
-	static function addEventListener(event:NetInfoEvent, handler:Connectivity->Void):Void;
-	static function removeEventListener(event:NetInfoEvent, handler:Connectivity->Void):Void;
+	static function addEventListener(event:NetInfoEventName, handler:Connectivity->Void):Void;
+	static function removeEventListener(event:NetInfoEventName, handler:Connectivity->Void):Void;
 	static function fetch():Promise<Connectivity>;
 	static function isConnectionExpensive():Promise<Bool>;
 	static var isConnected:{
-		function addEventListener(event:NetInfoEvent, handler:Bool->Void):Void;
-		function removeEventListener(event:NetInfoEvent, handler:Bool->Void):Void;
+		function addEventListener(event:NetInfoEventName, handler:Bool->Void):Void;
+		function removeEventListener(event:NetInfoEventName, handler:Bool->Void):Void;
 		function fetch():Promise<Bool>;
 		function isConnectionExpensive():Promise<Bool>;
 	}
 }
 
 @:enum
-abstract NetInfoEvent(String) to String {
+abstract NetInfoEventName(String) to String {
 	var Change = 'change';
 }
 	
