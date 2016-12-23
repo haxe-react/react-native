@@ -12,7 +12,7 @@ extern class StyleSheet {
 			case TAnonymous(_.get() => a):
 				var ct = ComplexType.TAnonymous([for(field in a.fields) {
 					access: [APublic],
-					kind: FVar(macro:Int, null),
+					kind: FVar(macro:Dynamic, null),
 					meta: null,
 					name: field.name,
 					pos: field.pos
