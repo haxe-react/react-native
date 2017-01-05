@@ -1,29 +1,31 @@
 # haxe-react-native
 
-## Note
+## Quick Start
 
-This library works, but incomplete, as only a portion of the react native component externs has been added. Contributions welcome.
+Follow the steps [here](https://github.com/haxe-react/haxe-react-native-sample) to start writing an app in less than a minute!
 
-### Install 
+## Manual Setup
 
-0. haxelib git react https://github.com/massiveinteractive/haxe-react
-1. haxelib git react_native https://github.com/haxe-react-native/hxjs-react-native
+##### Install 
 
-### Setup React Native
+0. haxelib install react
+1. haxelib install react-native
+
+##### Setup React Native
 
 Follow the steps [here](http://facebook.github.io/react-native/docs/getting-started.html#content)
 
-### Write some code
+##### Write some code
 
 Main.hx
 
 ``` haxe
 package;
 
-import api.react.ReactComponent;
-import api.react.ReactMacro.jsx;
-import api.react.native.api.*;
-import api.react.native.component.*;
+import react.ReactComponent;
+import react.ReactMacro.jsx;
+import react.native.api.*;
+import react.native.component.*;
 
 class Main
 {
@@ -49,13 +51,13 @@ class App extends ReactComponent
 }
 ```
 
-### Build
+##### Build
 
 build.hxml
 
 ```
 -lib react
--lib react_native
+-lib react-native
 
 -cp src
 -main Main
