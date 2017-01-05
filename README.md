@@ -6,16 +6,16 @@ Follow the steps [here](https://github.com/haxe-react/haxe-react-native-sample) 
 
 ## Manual Setup
 
-##### Install 
+##### Install Haxelibs
 
-0. haxelib install react
-1. haxelib install react-native
+0. `haxelib install react`
+1. `haxelib install react-native`
 
 ##### Setup React Native
 
 Follow the steps [here](http://facebook.github.io/react-native/docs/getting-started.html#content)
 
-##### Write some code
+##### Write some Haxe
 
 Main.hx
 
