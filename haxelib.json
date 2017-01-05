@@ -11,6 +11,8 @@
     "kevinresol"
   ],
   "releasenote": "initial release",
-  "version": "0.1.0",
-  "dependencies": {}
+  "version": "0.1.1",
+  "dependencies": {
+    "react": ""
+  }
 }
