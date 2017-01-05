@@ -1,6 +1,7 @@
 {
   "name": "react-native",
   "license": "MIT",
+  "url": "https://github.com/haxe-react/haxe-react-native",
   "tags": [
     "react",
     "native"
