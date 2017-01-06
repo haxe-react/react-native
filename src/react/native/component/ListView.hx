@@ -12,6 +12,7 @@ extern class ListViewDataSource<TData, TSectionId, TRowId, TSection, TRow> {
 	function new(options:ListViewDataSourceOptions<TData, TSectionId, TRowId, TSection, TRow>);
 	function cloneWithRows(arr:Array<TRow>):ListViewDataSource<TData, TSectionId, TRowId, TSection, TRow>;
 	function cloneWithRowsAndSections(data:TData, sectionIds:Array<TSectionId>, rowIds:Array<TRowId>):ListViewDataSource<TData, TSectionId, TRowId, TSection, TRow>;
+	function getRowCount():Int;
 }
 
 typedef ListViewDataSourceOptions<TData, TSectionId, TRowId, TSection, TRow> = {
