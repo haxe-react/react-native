@@ -66,7 +66,7 @@ extern class AnimatedText extends react.ReactComponent {}
 @:jsRequire('react-native', 'Animated.Image')
 extern class AnimatedImage extends react.ReactComponent {}
 
-typedef ValueListenerCallback = Float->Void;
+typedef ValueListenerCallback = {value:Float}->Void;
 typedef ValueXYListenerCallback = {x:Float, y:Float}->Void;
 
 typedef AnimationConfig = {
