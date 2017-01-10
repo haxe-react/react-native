@@ -5,9 +5,8 @@ import haxe.Constraints;
 
 @:jsRequire('react-native', 'Animated')
 extern class Animated {
-	static inline var Value = AnimatedValue;
-	static inline var ValueXY = AnimatedValueXY;
 	static inline var View = AnimatedView;
+	static inline var ScrollView = AnimatedScrollView;
 	static inline var Text = AnimatedText;
 	static inline var Image = AnimatedImage;
 	
@@ -30,7 +29,7 @@ extern class Animated {
 }
 
 @:jsRequire('react-native', 'Animated.Value')
-extern class AnimatedValue {
+extern class AnimatedValue extends Animated {
 	function new(v:Float);
 	function setValue(v:Float):Void;
 	function setOffset(v:Float):Void;
@@ -40,12 +39,10 @@ extern class AnimatedValue {
 	function removeListener(id:String):Void;
 	function removeAllListeners():Void;
 	function stopAnimation(?callback:Float->Void):Void;
-	
-	function interpolate(config:InterpolationConfigType):Animated;
 }
 
 @:jsRequire('react-native', 'Animated.ValueXY')
-extern class AnimatedValueXY {
+extern class AnimatedValueXY extends Animated {
 	function new(?value:{x:EitherType<Float, AnimatedValue>, y:EitherType<Float, AnimatedValue>});
 	function setValue(v:{x:Float, y:Float}):Void;
 	function setOffset(v:{x:Float, y:Float}):Void;
@@ -59,6 +56,9 @@ extern class AnimatedValueXY {
 
 @:jsRequire('react-native', 'Animated.View')
 extern class AnimatedView extends react.ReactComponent {}
+
+@:jsRequire('react-native', 'Animated.ScrollView')
+extern class AnimatedScrollView extends react.ReactComponent {}
 
 @:jsRequire('react-native', 'Animated.Text')
 extern class AnimatedText extends react.ReactComponent {}
