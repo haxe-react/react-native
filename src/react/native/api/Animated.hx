@@ -1,5 +1,6 @@
 package react.native.api;
 
+import react.native.component.*;
 import haxe.extern.EitherType;
 import haxe.Constraints;
 
@@ -58,7 +59,9 @@ extern class AnimatedValueXY extends Animated {
 extern class AnimatedView extends react.ReactComponent {}
 
 @:jsRequire('react-native', 'Animated.ScrollView')
-extern class AnimatedScrollView extends react.ReactComponent {}
+extern class AnimatedScrollView extends react.ReactComponent {
+	var _component:ScrollView;
+}
 
 @:jsRequire('react-native', 'Animated.Text')
 extern class AnimatedText extends react.ReactComponent {}
