@@ -4,25 +4,33 @@ import js.Promise;
 
 @:jsRequire('react-native', 'CameraRoll')
 extern class CameraRoll {
+	static function saveImageWithTag(tag:String):Promise<String>;
+	static function saveToCameraRoll(tag:String, ?type:SaveType):Promise<String>;
 	static function getPhotos(params:GetPhotoParams):Promise<GetPhotoResult>;
 }
 
 @:enum
 abstract GroupTypes(String) {
-	var GAlbum = 'Album';
-	var GAll = 'All';
-	var GEvent = 'Event';
-	var GFaces = 'Faces';
-	var GLibrary = 'Library';
-	var GPhotoStream = 'PhotoStream';
-	var GSavedPhotos = 'SavedPhotos';
+	var Album = 'Album';
+	var All = 'All';
+	var Event = 'Event';
+	var Faces = 'Faces';
+	var Library = 'Library';
+	var PhotoStream = 'PhotoStream';
+	var SavedPhotos = 'SavedPhotos';
 }
 
 @:enum
 abstract AssetType(String) {
-	var AAll = 'All';
-	var AVideo = 'Video';
-	var APhotos = 'Photos';
+	var All = 'All';
+	var Videos = 'Videos';
+	var Photos = 'Photos';
+}
+
+@:enum
+abstract SaveType(String) {
+	var Video = 'video';
+	var Photo = 'photo';
 }
 
 typedef GetPhotoParams = {
@@ -35,29 +43,33 @@ typedef GetPhotoParams = {
 }
 
 typedef GetPhotoResult = {
-	edges:Array<{
-		node: {
-			timestamp:Float,
-			group_name:String,
-			type:String,
-			image: {
-				isStored:Bool,
-				uri:String,
-				height:Int,
-				width:Int,
-			},
-			location: {
-				speed:Float,
-				latitude:Float,
-				longitude:Float,
-				heading:Float,
-				altitude:Float,
-			}
+	edges:Array<Edge>,
+	page_info:PageInfo,
+}
+
+typedef PageInfo = {
+	has_next_page:Bool,
+	start_cursor:String,
+	end_cursor:String,
+}
+
+typedef Edge = {
+	node: {
+		type:String,
+		group_name:String,
+		image: {
+			uri:String,
+			height:Int,
+			width:Int,
+			isStored:Bool,
+		},
+		timestamp:Float,
+		location: {
+			latitude:Float,
+			longitude:Float,
+			altitude:Float,
+			heading:Float,
+			speed:Float,
 		}
-	}>,
-	page_info: {
-		has_next_page:Bool,
-		start_cursor:String,
-		end_cursor:String,
 	}
 }
