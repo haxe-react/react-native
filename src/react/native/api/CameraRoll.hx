@@ -1,6 +1,7 @@
 package react.native.api;
 
 import js.Promise;
+using StringTools;
 
 @:jsRequire('react-native', 'CameraRoll')
 extern class CameraRoll {
@@ -53,9 +54,24 @@ typedef PageInfo = {
 	end_cursor:String,
 }
 
+abstract NodeType(String) to String {
+	@:to public function asEnum():SaveType {
+		return switch this {
+			#if ios
+			case 'ALAssetTypeVideo': Video;
+			case 'ALAssetTypePhoto': Photo;
+			#elseif android
+			case v if(v.startsWith('video/')): Video;
+			case v if(v.startsWith('image/')): Photo;
+			#end
+			default: cast this; // TODO:
+		}
+	}
+}
+
 typedef Edge = {
 	node: {
-		type:String,
+		type:NodeType,
 		group_name:String,
 		image: {
 			uri:String,
