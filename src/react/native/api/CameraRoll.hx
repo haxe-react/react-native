@@ -55,6 +55,16 @@ typedef PageInfo = {
 }
 
 abstract NodeType(String) to String {
+	public function asMimeType():String {
+		return switch this {
+			#if ios
+			case 'ALAssetTypeVideo': 'video/mp4'; // TODO: how to determine?
+			case 'ALAssetTypePhoto': 'image/jpeg'; // TODO: how to determine?
+			#end
+			default: this;
+		}
+	}
+	
 	@:to public function asEnum():SaveType {
 		return switch this {
 			#if ios
