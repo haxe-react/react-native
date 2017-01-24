@@ -78,6 +78,7 @@ typedef Edge = {
 			height:Int,
 			width:Int,
 			isStored:Bool,
+			#if ios filename:String, #end
 		},
 		timestamp:Float,
 		location: {
