@@ -11,5 +11,5 @@ extern class ToastAndroid {
 	static function showWithGravity(message:String, duration:Duration, gravity:Gravity):Void;
 }
 
-abstract Duration(String) {}
-abstract Gravity(String) {}
+abstract Duration(Dynamic) {}
+abstract Gravity(Dynamic) {}
