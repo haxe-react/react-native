@@ -21,15 +21,15 @@ typedef ViewProps = {
 	?onResponderTerminationRequest:Function,
 	?onStartShouldSetResponder:Function,
 	?onStartShouldSetResponderCapture:Function,
-	?pointerEvents:PointerEvent,
+	?pointerEvents:Enums<'box-none', 'none', 'box-only', 'auto'>,
 	?removeClippedSubviews:Bool,
 	?style:ViewStyle,
 	?testID:String,
 	// android
-	?accessibilityComponentType:AccessibilityComponentTypes,
-	?accessibilityLiveRegion:AccessibilityLiveRegion,
+	?accessibilityComponentType:Enums<'none', 'button', 'radiobutton_checked', 'radiobutton_unchecked'>,
+	?accessibilityLiveRegion:Enums<'none', 'polite', 'assertive'>,
 	?collapsable:Bool,
-	?importantForAccessibility:ImportantForAccessibility,
+	?importantForAccessibility:Enums<'auto', 'yes', 'no', 'no-hide-descendants'>,
 	?needsOffscreenAlphaCompositing:Bool,
 	?renderToHardwareTextureAndroid:Bool,
 	// ios
@@ -38,55 +38,5 @@ typedef ViewProps = {
 	?shouldRasterizeIOS:Bool,
 }
 
-@:enum
-abstract PointerEvent(String) {
-	var BoxNone = 'box-none';
-	var None = 'none';
-	var BoxOnly = 'box-only';
-	var Auto = 'auto';
-}
-
-@:enum
-abstract AccessibilityComponentTypes(String) {
-	var None = 'none';
-	var Button = 'button';
-	var RadiobuttonChecked = 'radiobutton_checked';
-	var RadiobuttonUnchecked = 'radiobutton_unchecked';
-}
-
-@:enum
-abstract AccessibilityLiveRegion(String) {
-	var None = 'none';
-	var Polite = 'polite';
-	var Assertive = 'assertive';
-}
-
-@:enum
-abstract ImportantForAccessibility(String) {
-	var Auto = 'auto';
-	var Yes = 'yes';
-	var No = 'no';
-	var NoHideDescendants = 'no-hide-descendants';
-}
-
-@:enum
-abstract AccessibilityTraits(String) {
-	var None = 'none';
-	var Button = 'button';
-	var Link = 'link';
-	var Header = 'header';
-	var Search = 'search';
-	var Image = 'image';
-	var Selected = 'selected';
-	var Plays = 'plays';
-	var Key = 'key';
-	var Text = 'text';
-	var Summary = 'summary';
-	var Disabled = 'disabled';
-	var FrequentUpdates = 'frequentUpdates';
-	var StartsMedia = 'startsMedia';
-	var Adjustable = 'adjustable';
-	var AllowsDirectInteraction = 'allowsDirectInteraction';
-	var PageTurn = 'pageTurn';
-}
+typedef AccessibilityTraits = Enums<'none', 'button', 'link', 'header', 'search', 'image', 'selected', 'plays', 'key', 'text', 'summary', 'disabled', 'frequentUpdates', 'startsMedia', 'adjustable', 'allowsDirectInteraction', 'pageTurn'>;
 
