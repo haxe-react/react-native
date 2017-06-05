@@ -10,7 +10,7 @@ typedef ImageProps = {
 	?onLoadEnd:Function,
 	?onLoadStart:Function,
 	?resizeMode:ResizeMode,
-	?source:Dynamic, // ImageSourcePropType
+	?source:ImageSource,
 	?style:ImageStyle,
 	?testID:String,
 	// android

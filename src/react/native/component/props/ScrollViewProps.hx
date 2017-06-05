@@ -17,7 +17,7 @@ typedef ScrollViewProps = {
 	?scrollEnabled:Bool,
 	?showsHorizontalScrollIndicator:Bool,
 	?showsVerticalScrollIndicator:Bool,
-	?stickyHeaderIndices:Array<Float>,
+	?stickyHeaderIndices:Array<Int>,
 	?style:ScrollViewStyle,
 	// android
 	?endFillColor:Color,

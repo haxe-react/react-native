@@ -1,7 +1,10 @@
 package react.native.component;
 
+import react.native.component.props.*;
+import react.ReactComponent;
+
 @:jsRequire('react-native', 'ListView')
-extern class ListView extends react.ReactComponent {
+extern class ListView extends ReactComponentOfProps<ListViewProps> {
 	static inline var DataSource = ListViewDataSource;
 }
 
