@@ -4,6 +4,10 @@ import haxe.Constraints;
 import haxe.extern.EitherType;
 
 typedef ViewProps = {
+	> ViewPropsWithoutStyle,
+	?style:ViewStyle,
+}
+typedef ViewPropsWithoutStyle = {
 	> Props,
 	?accessibilityLabel:Node,
 	?accessible:Bool,
@@ -23,7 +27,6 @@ typedef ViewProps = {
 	?onStartShouldSetResponderCapture:Function,
 	?pointerEvents:Enums<'box-none', 'none', 'box-only', 'auto'>,
 	?removeClippedSubviews:Bool,
-	?style:ViewStyle,
 	?testID:String,
 	// android
 	?accessibilityComponentType:Enums<'none', 'button', 'radiobutton_checked', 'radiobutton_unchecked'>,

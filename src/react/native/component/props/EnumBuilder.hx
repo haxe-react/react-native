@@ -20,7 +20,6 @@ class EnumBuilder {
 				
 				values.sort(Reflect.compare);
 				var cacheKey = values.join(',');
-				
 				if(!cache.exists(cacheKey)) {
 					var name = 'Enum_${counter++}';
 					var pack = ['react', 'native', 'component', 'props'];
@@ -32,12 +31,11 @@ class EnumBuilder {
 						meta: [{name: ':enum', pos: pos}],
 						fields: values.map(function(v):Field return {
 							kind: FVar(null, macro $v{v}),
-							name: camel(v),
+							name: sanitize(camel(v)),
 							pos: pos,
 						}),
 						pos: pos,
 					});
-					
 					cache.set(cacheKey, TPath({name: name, pack: pack}));
 				}
 				
@@ -47,12 +45,16 @@ class EnumBuilder {
 		}
 	}
 	
-	static function camel(v:String) {
-		return v.replace('-', '_').split('_').map(upperFirst).join('');
-	}
+	static function sanitize(v:String)
+		return switch v.charCodeAt(0) {
+			case c if(c >= '0'.code && c <= '9'.code): '_$v';
+			default: v;
+		}
+		
+	static function camel(v:String)
+		return v.replace('-', '_').replace(' ', '_').split('_').map(upperFirst).join('');
 	
-	static function upperFirst(v:String) {
+	static function upperFirst(v:String)
 		return v.charAt(0).toUpperCase() + v.substr(1);
-	}
 	#end
 }
