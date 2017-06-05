@@ -7,7 +7,7 @@ typedef WebViewProps = {
 	> ViewProps,
 	?automaticallyAdjustContentInsets:Bool,
 	?contentInset: {top:Float, left:Float, bottom:Float, right:Float},
-	?html:String,
+	// ?html:String, // deprecated
 	?injectJavaScript:Function,
 	?injectedJavaScript:String,
 	?mediaPlaybackRequiresUserAction:Bool,
@@ -22,7 +22,7 @@ typedef WebViewProps = {
 	?scalesPageToFit:Bool,
 	?source: EitherType<{uri:String, method:String, headers:Dynamic, body:String}, EitherType<{html:String, baseUrl:String}, Float>>,
 	?startInLoadingState:Bool,
-	?url:String,
+	// ?url:String, // deprecated
 	// android
 	?domStorageEnabled:Bool,
 	?javaScriptEnabled:Bool,
