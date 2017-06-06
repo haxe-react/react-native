@@ -4,7 +4,8 @@ import haxe.extern.EitherType;
 import react.ReactComponent;
 
 typedef Props = {
+	?ref:Any->Void,
 	?children:EitherType<Child, Array<Child>>,
 }
 
-private typedef Child = EitherType<String, ReactElement>;
+typedef Child = EitherType<String, ReactElement>;

@@ -6,7 +6,7 @@ typedef TextProps = {
 	> Props,
 	?accessible:Bool,
 	?allowFontScaling:Bool,
-	?ellipsizeMode:EllipsizeMode,
+	?ellipsizeMode:Enums<'head', 'middle', 'tail', 'clip'>,
 	?IntOfLines:Int,
 	?onLayout:Function,
 	?onLongPress:Function,
@@ -17,23 +17,9 @@ typedef TextProps = {
 	?testID:String,
 	// android
 	?selectionColor:Color,
-	?textBreakStrategy:TextBreakStrategy,
+	?textBreakStrategy:Enums<'simple', 'highQuality', 'balanced'>,
 	// ios
 	?adjustsFontSizeToFit:Bool,
 	?minimumFontScale:Float,
 	?suppressHighlighting:Bool,
-}
-
-@:enum
-abstract EllipsizeMode(String) {
-	var Head = 'head';
-	var Middle = 'middle';
-	var Tail = 'tail';
-	var Clip = 'clip';
-}
-@:enum
-abstract TextBreakStrategy(String) {
-	var Simple = 'simple';
-	var HighQuality = 'highQuality';
-	var Balanced = 'balanced';
 }

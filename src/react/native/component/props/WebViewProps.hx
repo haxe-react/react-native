@@ -37,4 +37,4 @@ typedef WebViewProps = {
 	?scrollEnabled:Bool,
 }
 
-typedef DataDetectorType = Enums<'phoneNumber', 'link', 'address', 'calendarEvent', 'none', 'all'>;
+private typedef DataDetectorType = Enums<'phoneNumber', 'link', 'address', 'calendarEvent', 'none', 'all'>;
