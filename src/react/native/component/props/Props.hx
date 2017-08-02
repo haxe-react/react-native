@@ -1,11 +1,11 @@
 package react.native.component.props;
 
-import haxe.extern.EitherType;
 import react.ReactComponent;
 
 typedef Props = {
 	?ref:Any->Void,
-	?children:EitherType<Child, Array<Child>>,
+	?children:Children,
 }
 
-typedef Child = EitherType<String, ReactElement>;
+@:coreType abstract Children from Array<Child> from Child {}
+@:coreType abstract Child from Bool from String from Int from Float from ReactElement {}
