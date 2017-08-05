@@ -4,6 +4,7 @@ import haxe.Constraints;
 import haxe.extern.EitherType;
 
 typedef ImageProps = {
+	> Props,
 	?onError:Function,
 	?onLayout:Function,
 	?onLoad:Function,
