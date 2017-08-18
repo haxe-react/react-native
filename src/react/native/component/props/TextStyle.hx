@@ -13,11 +13,13 @@ typedef TextStyle = {
 	?textShadowColor:Color,
 	?textShadowOffset:{width: Float, height: Float},
 	?textShadowRadius:Float,
-	?androidincludeFontPadding:Bool,
-	?androidtextAlignVertical:Enums<'auto', 'top', 'bottom', 'center'>,
-	?iosfontVariant:Array<Enums<'small-caps', 'oldstyle-nums', 'lining-nums', 'tabular-nums', 'proportional-nums'>>,
-	?iosletterSpacing:Float,
-	?iostextDecorationColor:Color,
-	?iostextDecorationStyle:Enums<'solid', 'double', 'dotted', 'dashed'>,
-	?ioswritingDirection:Enums<'auto', 'ltr', 'rtl'>,
+	// android
+	?includeFontPadding:Bool,
+	?textAlignVertical:Enums<'auto', 'top', 'bottom', 'center'>,
+	// ios
+	?fontVariant:Array<Enums<'small-caps', 'oldstyle-nums', 'lining-nums', 'tabular-nums', 'proportional-nums'>>,
+	?letterSpacing:Float,
+	?textDecorationColor:Color,
+	?textDecorationStyle:Enums<'solid', 'double', 'dotted', 'dashed'>,
+	?writingDirection:Enums<'auto', 'ltr', 'rtl'>,
 }

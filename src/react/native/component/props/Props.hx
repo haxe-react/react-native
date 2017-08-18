@@ -5,6 +5,7 @@ import react.ReactComponent;
 typedef Props = {
 	?ref:Any->Void,
 	?children:Children,
+	?key:Dynamic,
 }
 
 @:coreType abstract Children from Array<Child> from Child {}
