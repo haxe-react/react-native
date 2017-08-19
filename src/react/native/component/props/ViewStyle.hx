@@ -4,6 +4,6 @@ typedef ViewStyle = {
 	> LayoutProps,
 	> Transforms,
 	> ShadowProps,
+	> ViewStyleProps,
 	?color:String,
-	?backgroundColor:String,
 }
