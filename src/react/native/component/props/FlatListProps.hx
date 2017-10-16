@@ -4,6 +4,7 @@ import react.ReactComponent;
 import haxe.Constraints;
 
 typedef FlatListProps<T> = {
+	> ScrollViewProps,
 	?ItemSeparatorComponent:Class<ReactComponent>,
 	?ListFooterComponent:Class<ReactComponent>,
 	?ListHeaderComponent:Class<ReactComponent>,
