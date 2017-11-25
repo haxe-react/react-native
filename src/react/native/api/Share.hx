@@ -5,10 +5,15 @@ import js.Promise;
 
 @:jsRequire("react-native", "Share")
 extern class Share {
-	static function share(content:Content, options:Options):Promise<Dynamic>;
+	static function share(content:Content, ?options:Options):Promise<Dynamic>;
 }
  
-private typedef Content = EitherType<{?title:String, message:String}, {?title:String, url:String}>;
+private typedef Content = {
+	title:String,
+	?message:String,
+	?url:String
+}
+
 private typedef Options = {
 	?dialogTitle:String,
 	?excludeActivityTypes:Array<String>,

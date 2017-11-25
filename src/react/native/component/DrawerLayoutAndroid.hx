@@ -1,14 +1,12 @@
 package react.native.component;
 
+import react.native.component.props.DrawerLayoutAndroidProps;
+import react.ReactComponent;
+
+
 @:jsRequire('react-native', 'DrawerLayoutAndroid')
-extern class DrawerLayoutAndroid extends react.ReactComponent {
-	static var positions:DrawerPosition;
+extern class DrawerLayoutAndroid extends ReactComponentOfProps<DrawerLayoutAndroidProps> {
+	static var positions:{Left:DrawerPosition, Right:DrawerPosition};
 	function openDrawer():Void;
 	function closeDrawer():Void;
-}
-
-
-typedef DrawerPosition = {
-	Left:Dynamic,
-	Right:Dynamic,
 }
