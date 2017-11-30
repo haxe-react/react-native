@@ -1,6 +1,8 @@
 package react.native.component.props;
 
 import haxe.Constraints;
+import react.component.props.Props;
+import enums.Enums;
 
 typedef TextProps = {
 	> Props,

@@ -2,6 +2,8 @@ package react.native.component.props;
 
 import haxe.Constraints;
 import haxe.extern.EitherType;
+import react.component.props.Props;
+import enums.Enums;
 
 typedef ViewProps = {
 	> ViewPropsWithoutStyle,

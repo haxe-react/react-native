@@ -1,6 +1,7 @@
 package react.native.component.props;
 
 import haxe.Constraints;
+import enums.Enums;
 
 typedef ViewPagerAndroidProps = {
 	> ViewProps,

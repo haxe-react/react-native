@@ -1,5 +1,7 @@
 package react.native.component.props;
 
+import enums.Enums;
+
 typedef TextStyle = {
 	> ViewStyle,
 	?color:Color,

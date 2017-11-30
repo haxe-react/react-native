@@ -2,6 +2,7 @@ package react.native.component.props;
 
 import haxe.Constraints;
 import haxe.extern.EitherType;
+import enums.Enums;
 
 typedef TextInputProps = {
 	> ViewProps.ViewPropsWithoutStyle,
