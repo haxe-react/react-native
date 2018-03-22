@@ -1,9 +1,11 @@
 package react.native.component.props;
 
 import haxe.Constraints;
-import react.component.props.Props;
+import react.ReactComponent;
 
 typedef TouchableProps = {
-	> Props,
+	?ref:Any->Void,
+	?children:ReactElement,
+	?key:Dynamic,
 	?onPress:Function,
 }
