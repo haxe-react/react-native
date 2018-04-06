@@ -5,6 +5,11 @@ import haxe.macro.Expr;
 
 @:jsRequire("react-native", "StyleSheet")
 extern class StyleSheet {
+	
+	static var hairlineWidth:Dynamic;
+	static var absoluteFill:Dynamic;
+	static var absoluteFillObject:Dynamic;
+	
 	@:native('create') @:noCompletion static function _create<T>(obj:Dynamic):Dynamic;
 	
 	static inline macro function create(e:Expr):ExprOf<Dynamic<Int>> {
