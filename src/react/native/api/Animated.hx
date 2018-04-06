@@ -1,6 +1,8 @@
 package react.native.api;
 
+import react.ReactComponent;
 import react.native.component.*;
+import react.native.component.props.*;
 import haxe.extern.EitherType;
 import haxe.Constraints;
 
@@ -56,18 +58,18 @@ extern class AnimatedValueXY extends Animated {
 }
 
 @:jsRequire('react-native', 'Animated.View')
-extern class AnimatedView extends react.ReactComponent {}
+extern class AnimatedView extends ReactComponentOfProps<{>ViewProps,}> {}
 
 @:jsRequire('react-native', 'Animated.ScrollView')
-extern class AnimatedScrollView extends react.ReactComponent {
+extern class AnimatedScrollView extends ReactComponentOfProps<{>ViewProps,}> {
 	var _component:ScrollView;
 }
 
 @:jsRequire('react-native', 'Animated.Text')
-extern class AnimatedText extends react.ReactComponent {}
+extern class AnimatedText extends ReactComponentOfProps<{>TextProps,}> {}
 
 @:jsRequire('react-native', 'Animated.Image')
-extern class AnimatedImage extends react.ReactComponent {}
+extern class AnimatedImage extends ReactComponentOfProps<{>ImageProps,}> {}
 
 typedef ValueListenerCallback = {value:Float}->Void;
 typedef ValueXYListenerCallback = {x:Float, y:Float}->Void;
@@ -137,4 +139,26 @@ abstract ExtrapolateType(String) {
 	var Extend = 'extend';
 	var Identity = 'identity';
 	var Clamp = 'clamp';
+}
+
+@:jsRequire('react-native', 'Easing')
+extern class Easing {
+	static function step0(v:Float):Float;
+	static function step1(v:Float):Float;
+	static function linear(v:Float):Float;
+	static function ease(v:Float):Float;
+	static function quad(v:Float):Float;
+	static function cubic(v:Float):Float;
+	static function poly(v:Float):Float;
+	static function sin(v:Float):Float;
+	static function circle(v:Float):Float;
+	static function exp(v:Float):Float;
+	static function elastic(bounciness:Float):Float->Float;
+	static function back(s:Float):Float->Float;
+	static function bounce(v:Float):Float;
+	static function bezier(x1:Float, y1:Float, x2:Float, y2:Float):Float->Float;
+	@:native('in')
+	static function in_(f:Float->Float):Float->Float;
+	static function out(f:Float->Float):Float->Float;
+	static function inOut(f:Float->Float):Float->Float;
 }
