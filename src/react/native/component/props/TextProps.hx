@@ -9,7 +9,7 @@ typedef TextProps = {
 	?accessible:Bool,
 	?allowFontScaling:Bool,
 	?ellipsizeMode:Enums<'head', 'middle', 'tail', 'clip'>,
-	?IntOfLines:Int,
+	?numberOfLines:Int,
 	?onLayout:Function,
 	?onLongPress:Function,
 	?onPress:Function,
