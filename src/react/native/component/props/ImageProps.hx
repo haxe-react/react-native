@@ -16,6 +16,7 @@ typedef ImageProps = {
 	?source:ImageSource,
 	?style:ImageStyle,
 	?testID:String,
+	?borderRadius:Int,
 	// android
 	?resizeMethod:Enums<'auto', 'resize', 'scale'>,
 	// ios
