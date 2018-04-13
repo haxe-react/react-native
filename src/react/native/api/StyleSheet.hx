@@ -2,6 +2,8 @@ package react.native.api;
 
 import haxe.macro.Context;
 import haxe.macro.Expr;
+import react.native.component.props.*;
+using haxe.macro.Tools;
 
 @:jsRequire("react-native", "StyleSheet")
 extern class StyleSheet {
@@ -17,7 +19,7 @@ extern class StyleSheet {
 			case TAnonymous(_.get() => a):
 				var ct = ComplexType.TAnonymous([for(field in a.fields) {
 					access: [APublic],
-					kind: FVar(macro:Dynamic, null),
+					kind: FVar(macro:react.native.component.props.Style, null),
 					meta: null,
 					name: field.name,
 					pos: field.pos
