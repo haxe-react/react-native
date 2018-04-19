@@ -1,0 +1,5 @@
+# @install: lix --silent download "https://github.com/haxe-react/haxe-react-core/archive/7d5669baebeec8b4124e3e9a205572f86019a947.tar.gz" into react-core/0.0.0/github/7d5669baebeec8b4124e3e9a205572f86019a947
+-D react-core=0.0.0
+-cp ${HAXESHIM_LIBCACHE}/react-core/0.0.0/github/7d5669baebeec8b4124e3e9a205572f86019a947/src
+
+-lib react

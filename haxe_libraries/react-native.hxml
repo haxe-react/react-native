@@ -1,0 +1,5 @@
+-cp src
+-D react_native
+-lib quick-enums
+-lib react
+-lib react-core

@@ -1,0 +1,3 @@
+# @install: lix --silent download "haxelib:quick-enums#0.1.1" into quick-enums/0.1.1/haxelib
+-D quick-enums=0.1.1
+-cp ${HAXESHIM_LIBCACHE}/quick-enums/0.1.1/haxelib/src
