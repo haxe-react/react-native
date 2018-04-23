@@ -28,7 +28,7 @@ extern class StyleSheet {
 							Context.error('Only supports @:type(StyleType)', pos);
 						case {expr: EParenthesis({expr: ECheckType({expr: EObjectDecl(_)}, ct)})}:
 							ct;
-						case {expr: EObjectDecl(_)}:
+						case {expr: EObjectDecl(_) | EBlock([])}:
 							macro:react.native.component.props.Style;
 						case e:
 							Context.error('Expected object literal', e.pos);
