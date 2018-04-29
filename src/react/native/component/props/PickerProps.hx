@@ -5,7 +5,7 @@ import enums.Enums;
 
 typedef PickerProps = {
 	> ViewProps.ViewPropsWithoutStyle,
-	?onValueChange:Function,
+	?onValueChange:Dynamic->Int->Void,
 	?selectedValue:Dynamic,
 	?style:Dynamic,
 	?testID:String,
