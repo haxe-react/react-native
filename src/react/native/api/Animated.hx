@@ -34,6 +34,8 @@ extern class Animated {
 @:jsRequire('react-native', 'Animated.Value')
 extern class AnimatedValue extends Animated {
 	function new(v:Float);
+	@:native('__getValue')
+	function getValue():Float;
 	function setValue(v:Float):Void;
 	function setOffset(v:Float):Void;
 	function flattenOffset():Void;
@@ -47,6 +49,8 @@ extern class AnimatedValue extends Animated {
 @:jsRequire('react-native', 'Animated.ValueXY')
 extern class AnimatedValueXY extends Animated {
 	function new(?value:{x:EitherType<Float, AnimatedValue>, y:EitherType<Float, AnimatedValue>});
+	@:native('__getValue')
+	function getValue():{x:Float, y:Float};
 	function setValue(v:{x:Float, y:Float}):Void;
 	function setOffset(v:{x:Float, y:Float}):Void;
 	function flattenOffset():Void;
