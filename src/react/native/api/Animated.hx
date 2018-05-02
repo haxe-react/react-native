@@ -65,7 +65,7 @@ extern class AnimatedValueXY extends Animated {
 extern class AnimatedView extends ReactComponentOfProps<{>ViewProps,}> {}
 
 @:jsRequire('react-native', 'Animated.ScrollView')
-extern class AnimatedScrollView extends ReactComponentOfProps<{>ViewProps,}> {
+extern class AnimatedScrollView extends ReactComponentOfProps<{>ScrollViewProps,}> {
 	var _component:ScrollView;
 }
 
