@@ -7,4 +7,6 @@ import react.ReactComponent;
 extern class TextInput extends ReactComponentOfProps<TextInputProps> {
 	function isFocused():Bool;
 	function clear():Void;
+	function focus():Void;
+	function blur():Void;
 }
