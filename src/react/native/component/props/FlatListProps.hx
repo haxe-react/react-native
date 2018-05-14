@@ -2,12 +2,15 @@ package react.native.component.props;
 
 import react.ReactComponent;
 import haxe.Constraints;
+import haxe.extern.EitherType;
+
+private typedef Comp = EitherType<ReactElement, EitherType<Function, Class<ReactComponent>>>;
 
 typedef FlatListProps<T> = {
 	> ScrollViewProps,
-	?ItemSeparatorComponent:Class<ReactComponent>,
-	?ListFooterComponent:Class<ReactComponent>,
-	?ListHeaderComponent:Class<ReactComponent>,
+	?ItemSeparatorComponent:Comp,
+	?ListFooterComponent:Comp,
+	?ListHeaderComponent:Comp,
 	?columnWrapperStyle:Dynamic,
 	?data:Array<T>,
 	?extraData:Dynamic, 
