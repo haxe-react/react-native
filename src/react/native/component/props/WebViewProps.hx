@@ -21,7 +21,7 @@ typedef WebViewProps = {
 	?renderError:Function,
 	?renderLoading:Function,
 	?scalesPageToFit:Bool,
-	?source: EitherType<{uri:String, method:String, headers:Dynamic, body:String}, EitherType<{html:String, baseUrl:String}, Float>>,
+	?source: EitherType<{?uri:String, ?method:String, ?headers:Dynamic, ?body:String}, EitherType<{?html:String, ?baseUrl:String}, Float>>,
 	?startInLoadingState:Bool,
 	// ?url:String, // deprecated
 	// android
