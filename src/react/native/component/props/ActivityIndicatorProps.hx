@@ -8,5 +8,5 @@ typedef ActivityIndicatorProps = {
 	?animating:Bool, 
 	?color:Color,
 	?size:EitherType<Enums<'small', 'large'>, Float>, 
-	?ioshidesWhenStopped:Bool,
+	?hidesWhenStopped:Bool,
 }
