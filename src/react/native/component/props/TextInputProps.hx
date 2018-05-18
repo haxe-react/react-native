@@ -33,7 +33,7 @@ typedef TextInputProps = {
 	?selectTextOnFocus:Bool,
 	?selection:{start:Int, end:Int},
 	?selectionColor:Color,
-	?style:TextStyle,
+	?style:Multiple<TextStyle>,
 	?value:String,
 	// android
 	?disableFullscreenUI:Bool,

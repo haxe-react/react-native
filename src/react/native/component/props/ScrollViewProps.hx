@@ -6,7 +6,7 @@ import enums.Enums;
 
 typedef ScrollViewProps = {
 	> ViewProps.ViewPropsWithoutStyle,
-	?contentContainerStyle:ViewStyle,
+	?contentContainerStyle:Multiple<ViewStyle>,
 	?horizontal:Bool,
 	?keyboardDismissMode:Enums<'none', 'interactive', 'on-drag'>,
 	?keyboardShouldPersistTaps:EitherType<Enums<'always', 'never', 'handled'>, Bool>,
@@ -19,7 +19,7 @@ typedef ScrollViewProps = {
 	?showsHorizontalScrollIndicator:Bool,
 	?showsVerticalScrollIndicator:Bool,
 	?stickyHeaderIndices:Array<Int>,
-	?style:ScrollViewStyle,
+	?style:Multiple<ScrollViewStyle>,
 	// android
 	?endFillColor:Color,
 	?overScrollMode:Enums<'auto', 'always', 'never'>,

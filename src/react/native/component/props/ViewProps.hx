@@ -7,7 +7,7 @@ import enums.Enums;
 
 typedef ViewProps = {
 	> ViewPropsWithoutStyle,
-	?style:ViewStyle,
+	?style:Multiple<ViewStyle>,
 }
 typedef ViewPropsWithoutStyle = {
 	> Props,

@@ -19,7 +19,7 @@ typedef NavigatorIOSProps = {
 		rightButtonTitle:String,
 		rightButtonSystemIcon:Any, // Object.keys(SystemIcons),
 		onRightButtonPress:Function,
-		wrapperStyle:ViewStyle,
+		wrapperStyle:Multiple<ViewStyle>,
 		navigationBarHidden:Bool,
 		shadowHidden:Bool,
 		tintColor:String,
@@ -28,7 +28,7 @@ typedef NavigatorIOSProps = {
 		translucent:Bool
 	},
 	?interactivePopGestureEnabled:Bool,
-	?itemWrapperStyle:ViewStyle,
+	?itemWrapperStyle:Multiple<ViewStyle>,
 	?navigationBarHidden:Bool,
 	?shadowHidden:Bool,
 	?tintColor:String,

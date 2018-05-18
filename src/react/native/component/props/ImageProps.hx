@@ -14,7 +14,7 @@ typedef ImageProps = {
 	?onLoadStart:Function,
 	?resizeMode:ResizeMode,
 	?source:ImageSource,
-	?style:ImageStyle,
+	?style:Multiple<ImageStyle>,
 	?testID:String,
 	?borderRadius:Int,
 	// android

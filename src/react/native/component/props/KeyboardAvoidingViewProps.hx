@@ -5,6 +5,6 @@ import enums.Enums;
 typedef KeyboardAvoidingViewProps = {
 	> ViewProps,
 	?behavior:Enums<'height', 'position', 'padding'>,
-	?contentContainerStyle:ViewStyle, 
+	?contentContainerStyle:Multiple<ViewStyle>, 
 	?keyboardVerticalOffset:Float
 }

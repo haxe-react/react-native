@@ -12,7 +12,7 @@ typedef SliderProps = {
 	?onSlidingComplete:Function,
 	?onValueChange:Function,
 	?step:Float,
-	?style:ViewStyle,
+	?style:Multiple<ViewStyle>,
 	?testID:String,
 	?value:Float,
 	// android
