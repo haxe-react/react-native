@@ -3,7 +3,7 @@ import enums.Enums;
 
 typedef ViewStyleProps = {
 
-	?backfaceVisibility:Enums<'visible', 'hidden'>,
+	?backfaceVisibility:String,
 	?backgroundColor:Color,
 	?borderBottomColor:Color,
 	?borderBottomLeftRadius:Float,
@@ -15,7 +15,7 @@ typedef ViewStyleProps = {
 	?borderRadius:Float,
 	?borderRightColor:Color,
 	?borderRightWidth:Float,
-	?borderStyle:Enums<'solid', 'dotted', 'dashed'>,
+	?borderStyle:String,
 	?borderTopColor:Color,
 	?borderTopLeftRadius:Float,
 	?borderTopRightRadius:Float,

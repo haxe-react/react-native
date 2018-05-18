@@ -6,7 +6,7 @@ typedef ImageStyle = {
 	> LayoutProps,
 	> Transforms,
 	> ShadowProps,
-	?backfaceVisibility:Enums<'visible', 'hidden'>,
+	?backfaceVisibility:String,
 	?backgroundColor:Color,
 	?borderBottomLeftRadius:Float,
 	?borderBottomRightRadius:Float,
@@ -16,7 +16,7 @@ typedef ImageStyle = {
 	?borderTopRightRadius:Float,
 	?borderWidth:Float,
 	?opacity:Float,
-	// ?overflow:Enums<'visible', 'hidden'>,
+	// ?overflow:String,
 	?resizeMode:Dynamic<ImageProps.ResizeMode>,
 	?tintColor:Color,
 }
