@@ -9,6 +9,7 @@ private typedef Comp = EitherType<ReactElement, EitherType<Function, Class<React
 typedef FlatListProps<T> = {
 	> ScrollViewProps,
 	?ItemSeparatorComponent:Comp,
+	?ListEmptyComponent:Comp,
 	?ListFooterComponent:Comp,
 	?ListHeaderComponent:Comp,
 	?columnWrapperStyle:Dynamic,
