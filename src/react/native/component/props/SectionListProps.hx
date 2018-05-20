@@ -3,24 +3,27 @@ package react.native.component.props;
 import react.ReactComponent;
 import haxe.Constraints;
 
-typedef SectionListProps<T, S> = {
+typedef SectionListProps<T, S:{data:Array<T>}> = {
+	> ScrollViewProps,
 	?ItemSeparatorComponent:Class<ReactComponent>,
 	?ListFooterComponent:Class<ReactComponent>,
 	?ListHeaderComponent:Class<ReactComponent>,
 	?SectionSeparatorComponent:Class<ReactComponent>,
 	?extraData:Any,
-	initialNumToRender:Int,
-	keyExtractor:T->Int->String,
+	sections:Array<S>,
+	?inverted:Bool,
+	?initialNumToRender:Int,
+	?keyExtractor:T->Int->String,
 	?onEndReached:{distanceFromEnd:Float}->Void,
 	?onEndReachedThreshold:Float,
 	?onRefresh:Void->Void,
 	?onViewableItemsChanged:{viewableItems:Array<ViewToken>, changed:Array<ViewToken>}->Void,
-	viewableItems:Array<ViewToken>,
-	changed:Array<ViewToken>,
+	?iewableItems:Array<ViewToken>,
+	?hanged:Array<ViewToken>,
 	?refreshing:Bool,
-	?renderItem:{item:T, index:Int}->ReactElement,
+	?renderItem:{item:T, index:Int, section:S}->ReactElement,
 	?renderSectionHeader:{section:S}->ReactElement,
-	sections:Array<S>,
+	?renderSectionFooter:{section:S}->ReactElement,
 	?stickySectionHeadersEnabled:Bool,
 }
 

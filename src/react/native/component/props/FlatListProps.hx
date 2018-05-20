@@ -15,6 +15,7 @@ typedef FlatListProps<T> = {
 	?columnWrapperStyle:Dynamic,
 	?data:Array<T>,
 	?extraData:Dynamic, 
+	?inverted:Bool,
 	?getItem:Function,
 	?getItemCount:Function,
 	?getItemLayout:Array<T>->Int->{length:Int, offset:Int, index:Int},
