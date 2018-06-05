@@ -144,25 +144,3 @@ abstract ExtrapolateType(String) {
 	var Identity = 'identity';
 	var Clamp = 'clamp';
 }
-
-@:jsRequire('react-native', 'Easing')
-extern class Easing {
-	static function step0(v:Float):Float;
-	static function step1(v:Float):Float;
-	static function linear(v:Float):Float;
-	static function ease(v:Float):Float;
-	static function quad(v:Float):Float;
-	static function cubic(v:Float):Float;
-	static function poly(v:Float):Float;
-	static function sin(v:Float):Float;
-	static function circle(v:Float):Float;
-	static function exp(v:Float):Float;
-	static function elastic(bounciness:Float):Float->Float;
-	static function back(s:Float):Float->Float;
-	static function bounce(v:Float):Float;
-	static function bezier(x1:Float, y1:Float, x2:Float, y2:Float):Float->Float;
-	@:native('in')
-	static function in_(f:Float->Float):Float->Float;
-	static function out(f:Float->Float):Float->Float;
-	static function inOut(f:Float->Float):Float->Float;
-}
