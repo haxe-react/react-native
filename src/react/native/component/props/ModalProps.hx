@@ -13,8 +13,8 @@ typedef ModalProps = {
 	?visible:Bool,
 	// android
 	?hardwareAccelerated:Bool,
-	?onRequestClose:Function,
+	?onRequestClose:Void->Void,
 	// ios
-	?onOrientationChange:Function,
+	?onOrientationChange:String->Void,
 	?supportedOrientations:Array<Enums<'portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right'>>,
 }
