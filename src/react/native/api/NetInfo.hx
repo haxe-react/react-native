@@ -5,49 +5,54 @@ import haxe.Constraints;
 
 @:jsRequire('react-native', 'NetInfo')
 extern class NetInfo {
-	static function addEventListener(event:NetInfoEventName, handler:Connectivity->Void):Void;
-	static function removeEventListener(event:NetInfoEventName, handler:Connectivity->Void):Void;
-	static function fetch():Promise<Connectivity>;
+	static function addEventListener(event:NetInfoEventName, handler:Info->Void):Void;
+	static function removeEventListener(event:NetInfoEventName, handler:Info->Void):Void;
+	static function getConnectionInfo():Promise<Info>;
 	static function isConnectionExpensive():Promise<Bool>;
+	
 	static var isConnected:{
 		function addEventListener(event:NetInfoEventName, handler:Bool->Void):Void;
 		function removeEventListener(event:NetInfoEventName, handler:Bool->Void):Void;
 		function fetch():Promise<Bool>;
-		function isConnectionExpensive():Promise<Bool>;
 	}
+}
+
+typedef Info = {
+	type:ConnectionType,
+	effectiveType:EffectiveConnectionType,
 }
 
 @:enum
 abstract NetInfoEventName(String) to String {
-	var Change = 'change';
+	var ConnectionChange = 'connectionChange';
 }
 	
 @:enum
-abstract Connectivity(String) to String {
-	
-#if ios
+abstract ConnectionType(String) to String {
 	
 	var None = 'none';
 	var Wifi = 'wifi';
-	var Cell = 'cell';
+	var Cellular = 'cellular';
 	var Unknown = 'unknown';
 	
-#elseif android
+#if android
 	
-	var None = 'NONE';
-	var Bluetooth = 'BLUETOOTH';
-	var Dummy = 'DUMMY';
-	var Ethernet = 'ETHERNET';
-	var Mobile = 'MOBILE';
-	var Mobile_dun = 'MOBILE_DUN';
-	var Mobile_hipri = 'MOBILE_HIPRI';
-	var Mobile_mms = 'MOBILE_MMS';
-	var Mobile_supl = 'MOBILE_SUPL';
-	var Vpn = 'VPN';
-	var Wifi = 'WIFI';
-	var Wimax = 'WIMAX';
-	var Unknown = 'UNKNOWN';
+	var Bluetooth = 'bluetooth';
+	var Ethernet = 'ethernet';
+	var Wimax = 'wimax';
 	
 #end
 
 }
+
+	
+@:enum
+abstract EffectiveConnectionType(String) to String {
+	
+	var _2g = '2g';
+	var _3g = '3g';
+	var _4g = '4g';
+	var Unknown = 'unknown';
+
+}
+
