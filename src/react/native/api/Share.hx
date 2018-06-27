@@ -16,7 +16,7 @@ private typedef Result = {
 }
  
 private typedef Content = {
-	title:String,
+	?title:String,
 	?message:String,
 	?url:String
 }
