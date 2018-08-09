@@ -4,4 +4,5 @@ import haxe.Constraints;
 
 typedef TouchableOpacityProps = {
 	> TouchableProps,
+	?activeOpacity:Float,
 }
