@@ -9,7 +9,7 @@ extern class Platform {
 }
 
 @:enum
-abstract Os(String) {
+abstract Os(String) to String {
 	var IOS = 'ios';
 	var Android = 'android';
 }
