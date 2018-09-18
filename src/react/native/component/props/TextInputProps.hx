@@ -35,6 +35,7 @@ typedef TextInputProps = {
 	?selectionColor:Color,
 	?style:TextStyle,
 	?value:String,
+	?testID:String,
 	// android
 	?disableFullscreenUI:Bool,
 	?inlineImageLeft:String,
