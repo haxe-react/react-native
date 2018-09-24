@@ -1,11 +1,10 @@
 package react.native.component.props;
 
 import haxe.Constraints;
-import react.component.props.Props;
 import enums.Enums;
 
 typedef TextProps = {
-	> Props,
+	//> Props, TODO REMOVED
 	?accessible:Bool,
 	?allowFontScaling:Bool,
 	?ellipsizeMode:Enums<'head', 'middle', 'tail', 'clip'>,

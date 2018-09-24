@@ -2,10 +2,10 @@ package react.native.component.props;
 
 import haxe.Constraints;
 import react.ReactComponent;
-import react.component.props.Props;
+//import react.component.props.Props;
 
 typedef TouchableProps = {
-	> PropsWithChildren<ReactElement>,
+	//> PropsWithChildren<ReactElement>,
 	?onPress:Function,
 	?style:ViewStyle,
 }

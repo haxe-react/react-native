@@ -1,5 +1,7 @@
 package react.native.component.props;
 
+import react.native.component.types.AnimationTypes;
+import react.native.component.types.ViewPropTypes;
 import haxe.Constraints;
 import haxe.extern.EitherType;
 import enums.Enums;
@@ -8,8 +10,8 @@ typedef ScrollViewProps = {
 	> ViewProps.ViewPropsWithoutStyle,
 	?contentContainerStyle:ViewStyle,
 	?horizontal:Bool,
-	?keyboardDismissMode:Enums<'none', 'interactive', 'on-drag'>,
-	?keyboardShouldPersistTaps:EitherType<Enums<'always', 'never', 'handled'>, Bool>,
+	?keyboardDismissMode:KeyboardDismissModeType,
+	?keyboardShouldPersistTaps:EitherType<KeyboardPersistType, Bool>,
 	?onContentSizeChange:Function,
 	?onScroll:Function,
 	?pagingEnabled:Bool,
@@ -22,7 +24,7 @@ typedef ScrollViewProps = {
 	?style:ScrollViewStyle,
 	// android
 	?endFillColor:Color,
-	?overScrollMode:Enums<'auto', 'always', 'never'>,
+	?overScrollMode:OverScrollModeType,
 	?scrollPerfTag:String,
 	// ios
 	?alwaysBounceHorizontal:Bool,
@@ -34,16 +36,16 @@ typedef ScrollViewProps = {
 	?centerContent:Bool,
 	?contentInset:{?top:Float, ?left:Float, ?bottom:Float, ?right:Float},
 	?contentOffset:{?x:Float, ?y:Float},
-	?decelerationRate:EitherType<Enums<'fast', 'normal'>, Float>,
+	?decelerationRate:EitherType<DecelarationRate, Float>,
 	?directionalLockEnabled:Bool,
-	?indicatorStyle:Enums<'default', 'black', 'white'>,
+	?indicatorStyle:IndicatorStyleType,
 	?maximumZoomScale:Float,
 	?minimumZoomScale:Float,
 	?onScrollAnimationEnd:Function,
 	?scrollEventThrottle:Float,
 	?scrollIndicatorInsets:{top:Float, left:Float, bottom:Float, right:Float},
 	?scrollsToTop:Bool,
-	?snapToAlignment:Enums<'start', 'center', 'end'>,
+	?snapToAlignment:SnappingType,
 	?snapToInterval:Float,
 	?zoomScale:Float,
 }
