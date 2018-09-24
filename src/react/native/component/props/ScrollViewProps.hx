@@ -4,7 +4,6 @@ import react.native.component.types.AnimationTypes;
 import react.native.component.types.ViewPropTypes;
 import haxe.Constraints;
 import haxe.extern.EitherType;
-import enums.Enums;
 
 typedef ScrollViewProps = {
 	> ViewProps.ViewPropsWithoutStyle,

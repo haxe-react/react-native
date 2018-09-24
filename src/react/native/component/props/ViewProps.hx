@@ -4,7 +4,6 @@ import react.native.component.types.AccessibilityTypes;
 import react.native.component.types.EventTypes;
 import haxe.Constraints;
 import haxe.extern.EitherType;
-import enums.Enums;
 
 typedef ViewProps = {
 	> ViewPropsWithoutStyle,
@@ -40,10 +39,8 @@ typedef ViewPropsWithoutStyle = {
 	?needsOffscreenAlphaCompositing:Bool,
 	?renderToHardwareTextureAndroid:Bool,
 	// ios
-	?accessibilityTraits:EitherType<AccessibilityTraits, Array<AccessibilityTraits>>,
+	?accessibilityTraits:EitherType<AccessibilityTraitsTypes, Array<AccessibilityTraitsTypes>>,
 	?accessibilityViewIsModal:Bool,
 	?shouldRasterizeIOS:Bool,
 }
-
-typedef AccessibilityTraits = Enums<'none', 'button', 'link', 'header', 'search', 'image', 'selected', 'plays', 'key', 'text', 'summary', 'disabled', 'frequentUpdates', 'startsMedia', 'adjustable', 'allowsDirectInteraction', 'pageTurn'>;
 

@@ -2,7 +2,7 @@ package react.native.component.props;
 
 import haxe.Constraints;
 import haxe.extern.EitherType;
-import enums.Enums;
+import react.native.component.types.ImagePropsTypes;
 import react.ReactComponent.ReactFragment;
 
 typedef ImageProps = {
@@ -18,7 +18,7 @@ typedef ImageProps = {
 	?testID:String,
 	?borderRadius:Int,
 	// android
-	?resizeMethod:Enums<'auto', 'resize', 'scale'>,
+	?resizeMethod:ResizeMethodType,
 	// ios
 	?accessibilityLabel:Node,
 	?accessible:Bool,
@@ -28,5 +28,3 @@ typedef ImageProps = {
 	?onPartialLoad:Function,
 	?onProgress:Function,
 }
-
-typedef ResizeMode = Enums<'cover', 'contain', 'stretch', 'repeat', 'center'>;

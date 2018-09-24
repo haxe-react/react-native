@@ -1,13 +1,13 @@
 package react.native.component.props;
+import react.native.component.types.TextPropsTypes;
 
 import haxe.Constraints;
-import enums.Enums;
 
 typedef TextProps = {
 	//> Props, TODO REMOVED
 	?accessible:Bool,
 	?allowFontScaling:Bool,
-	?ellipsizeMode:Enums<'head', 'middle', 'tail', 'clip'>,
+	?ellipsizeMode:EllipseModeTypes,
 	?numberOfLines:Int,
 	?onLayout:Function,
 	?onLongPress:Function,
@@ -18,7 +18,7 @@ typedef TextProps = {
 	?testID:String,
 	// android
 	?selectionColor:Color,
-	?textBreakStrategy:Enums<'simple', 'highQuality', 'balanced'>,
+	?textBreakStrategy:TextBreakStrategyTypes,
 	// ios
 	?adjustsFontSizeToFit:Bool,
 	?minimumFontScale:Float,

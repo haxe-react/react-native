@@ -8,11 +8,11 @@
   ],
   "classPath": "src",
   "contributors": [
-    "kevinresol"
+    "kevinresol",
+    "kiroukou"
   ],
   "releasenote": "initial release",
   "version": "0.1.1",
   "dependencies": {
-    "quick-enums": ""
   }
 }
