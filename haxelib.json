@@ -14,7 +14,7 @@
   "version": "0.1.1",
   "dependencies": {
     "react": "",
-    "react-core": "",
+    "react-core": "gh:haxe-react/haxe-react-core",
     "quick-enums": ""
   }
 }
