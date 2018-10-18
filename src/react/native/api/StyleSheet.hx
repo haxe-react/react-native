@@ -13,9 +13,10 @@ extern class StyleSheet {
 	static var absoluteFillObject:Dynamic;
 	
 	@:native('create') @:noCompletion static function _create<T>(obj:T):T;
+	@:native('flatten') @:noCompletion static function _flatten<T>(a:Array<T>):T;
 	
 	static inline macro function create(e:Expr):ExprOf<Dynamic<Int>> {
-		
+		var p = new haxe.macro.Printer();
 		var exprs = new Map<String, Expr>();
 		switch e.expr {
 			case EObjectDecl(fields):
@@ -29,18 +30,20 @@ extern class StyleSheet {
 						case {expr: EParenthesis({expr: ECheckType({expr: EObjectDecl(_)}, ct)})}:
 							ct;
 						case {expr: EObjectDecl(_) | EBlock([])}:
-							macro:react.native.component.props.Style;
+							macro : react.native.component.props.Style;
 						case e:
 							Context.error('Expected object literal', e.pos);
 					}
 					var expr = macro @:pos(field.expr.pos) (${field.expr}:$ct);
 					exprs[field.field] = field.expr = expr;
 				}
+			case EBlock([]): 
+
 			case _:
-				Context.error('Expected object literal', e.pos);
+				var error = p.printExpr(e);
+				Context.error('Expected object literal $error', e.pos);
+				return macro throw 'Error  ${error}';
 		}
-		
-		
 		return macro react.native.api.StyleSheet._create($e);
 	}
 }

@@ -22,4 +22,5 @@ typedef TextStyle = {
 	?textDecorationColor:Color,
 	?textDecorationStyle:String,
 	?writingDirection:String,
+	?textTransform:String,
 }
