@@ -7,7 +7,7 @@ import haxe.extern.EitherType;
 
 typedef ViewProps = {
 	> ViewPropsWithoutStyle,
-	?style:ViewStyle,
+	?style:haxe.extern.EitherType<ViewStyle, Array<ViewStyle>>,//after
 }
 
 typedef ViewPropsWithoutStyle = {
