@@ -2,18 +2,90 @@ package react.native.component.props;
 
 import haxe.Constraints;
 import haxe.extern.EitherType;
-import enums.Enums;
+
+@:enum
+abstract KeyBoardType(String) {
+	var Default = 'default';
+	var EmailAdress = 'email-address';
+	var Numeric = 'numeric';
+	var PhonePad = 'phone-pad';
+	var ASCIICapable = 'ascii-capable';
+	var NumbersAndPunctuation = 'numbers-and-punctuation';
+	var Url = 'url';
+	var NumberPad = 'number-pad';
+	var NamePhonePad = 'name-phone-pad';
+	var DecimalPad = 'decimal-pad';
+	var Twitter = 'twitter';
+	var WebSearch = 'web-search';
+}
+
+@:enum
+abstract AutoCapitalizeType(String) {
+	var None = 'none';
+	var Sentences = 'sentences';
+	var Words = 'words';
+	var Characters = 'characters';
+}
+
+@:enum
+abstract ReturnKeyType(String) {
+	var Done = 'done';
+	var Go = 'go';
+	var Next = 'next';
+	var Search = 'search';
+	var Send = 'send';
+	var None = 'none';
+	var Previous = 'previous';
+	var Default = 'default';
+	var EmergencyCall = 'emergency-call';
+	var Google = 'google';
+	var Join = 'join';
+	var Route = 'route';
+	var Yahoo = 'yahoo';
+}
+
+@:enum
+abstract TextBreakStrategyType(String) {
+	var Simple = 'simple';
+	var HighQuality = 'highQuality';
+	var Balanced = 'balanced';
+}
+
+@:enum
+abstract ClearButtonType(String) {
+	var Never = 'never';
+	var WhileEditing = 'while-editing';
+	var UnlessEdition = 'unless-editing';
+	var Always = 'always';
+}
+
+@:enum
+abstract KeyboardAppearanceType(String) {
+	var Default = 'default';
+	var Light = 'light';
+	var Dark = 'dark';
+}
+
+@:enum
+abstract DataDetectorType(String) {
+	var PhoneNumber = 'phoneNumber';
+	var Link = 'link';
+	var Adress = 'address';
+	var CalendarEvent= 'calendarEvent';
+	var None = 'none';
+	var All = 'all';
+}
 
 typedef TextInputProps = {
 	> ViewProps.ViewPropsWithoutStyle,
-	?autoCapitalize:Enums<'none', 'sentences', 'words', 'characters'>,
+	?autoCapitalize:AutoCapitalizeType,
 	?autoCorrect:Bool,
 	?autoFocus:Bool,
 	?blurOnSubmit:Bool,
 	?caretHidden:Bool,
 	?defaultValue:String,
 	?editable:Bool,
-	?keyboardType:Enums<'default', 'email-address', 'numeric', 'phone-pad', 'ascii-capable', 'numbers-and-punctuation', 'url', 'number-pad', 'name-phone-pad', 'decimal-pad', 'twitter', 'web-search'>,
+	?keyboardType:KeyBoardType,
 	?maxLength:Float,
 	?multiline:Bool,
 	?onBlur:Function,
@@ -28,7 +100,7 @@ typedef TextInputProps = {
 	?onSubmitEditing:Function,
 	?placeholder:Node,
 	?placeholderTextColor:Color,
-	?returnKeyType:Enums<'done', 'go', 'next', 'search', 'send', 'none', 'previous', 'default', 'emergency-call', 'google', 'join', 'route', 'yahoo'>,
+	?returnKeyType:ReturnKeyType,
 	?secureTextEntry:Bool,
 	?selectTextOnFocus:Bool,
 	?selection:{start:Int, end:Int},
@@ -42,17 +114,15 @@ typedef TextInputProps = {
 	?inlineImagePadding:Float,
 	?numberOfLines:Float,
 	?returnKeyLabel:String,
-	?textBreakStrategy:Enums<'simple', 'highQuality', 'balanced'>,
+	?textBreakStrategy:TextBreakStrategyType,
 	?underlineColorAndroid:Color,
 	// ios
-	?clearButtonMode:Enums<'never', 'while-editing', 'unless-editing', 'always'>,
+	?clearButtonMode:ClearButtonType,
 	?clearTextOnFocus:Bool,
 	?dataDetectorTypes:EitherType<DataDetectorType, Array<DataDetectorType>>,
 	?enablesReturnKeyAutomatically:Bool,
-	?keyboardAppearance:Enums<'default', 'light', 'dark'>,
+	?keyboardAppearance:KeyboardAppearanceType,
 	?onKeyPress:Function,
 	?selectionState:Dynamic, // DocumentSelectionState,
 	?spellCheck:Bool,
 }
-
-private typedef DataDetectorType = Enums<'phoneNumber', 'link', 'address', 'calendarEvent', 'none', 'all'>;
