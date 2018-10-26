@@ -5,7 +5,7 @@ import react.ReactComponent;
 import react.component.props.Props;
 
 typedef TouchableProps = {
-	> PropsWithChildren<ReactElement>,
+	> PropsWithChildren<ReactSingleFragment>,
 	?onPress:Function,
 	?style:ViewStyle,
 }
