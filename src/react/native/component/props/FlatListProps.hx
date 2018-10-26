@@ -4,7 +4,7 @@ import react.ReactComponent;
 import haxe.Constraints;
 import haxe.extern.EitherType;
 
-private typedef Comp = EitherType<ReactElement, EitherType<Function, Class<ReactComponent>>>;
+private typedef Comp = EitherType<ReactFragment, EitherType<Function, Class<ReactComponent>>>;
 
 typedef FlatListProps<T> = {
 	> ScrollViewProps,
@@ -31,7 +31,7 @@ typedef FlatListProps<T> = {
 	?viewableItems:Array<ViewToken>,
 	?changed:Array<ViewToken>,
 	?refreshing:Bool,
-	?renderItem:{item:T, index:Int}->ReactElement,
+	?renderItem:{item:T, index:Int}->ReactFragment,
 	?viewabilityConfig:ViewabilityConfig 
 }
 

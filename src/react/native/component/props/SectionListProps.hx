@@ -21,9 +21,9 @@ typedef SectionListProps<T, S:{data:Array<T>}> = {
 	?iewableItems:Array<ViewToken>,
 	?hanged:Array<ViewToken>,
 	?refreshing:Bool,
-	?renderItem:{item:T, index:Int, section:S}->ReactElement,
-	?renderSectionHeader:{section:S}->ReactElement,
-	?renderSectionFooter:{section:S}->ReactElement,
+	?renderItem:{item:T, index:Int, section:S}->ReactFragment,
+	?renderSectionHeader:{section:S}->ReactFragment,
+	?renderSectionFooter:{section:S}->ReactFragment,
 	?stickySectionHeadersEnabled:Bool,
 }
 
