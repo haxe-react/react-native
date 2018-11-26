@@ -4,6 +4,37 @@ import haxe.Constraints;
 import haxe.extern.EitherType;
 
 @:enum
+abstract TextContentType(String)
+{
+	var None = "none";
+	var URL = "URL";
+	var AddressCity = "addressCity";
+	var AddressCityAndState = "addressCityAndState";
+	var AddressState = "addressState";
+	var CountryName = "countryName";
+	var CreditCardNumber = "creditCardNumber";
+	var EmailAddress = "emailAddress";
+	var FamilyName = "familyName";
+	var FullStreetAddress = "fullStreetAddress";
+	var GivenName = "givenName";
+	var JobTitle = "jobTitle";
+	var Location = "location";
+	var MiddleName = "middleName";
+	var Name = "name";
+	var NamePrefix = "namePrefix";
+	var NameSuffix = "nameSuffix";
+	var Nickname = "nickname";
+	var OrganizationName = "organizationName";
+	var PostalCode = "postalCode";
+	var StreetAddressLine1 = "streetAddressLine1";
+	var StreetAddressLine2 = "streetAddressLine2";
+	var Sublocality = "sublocality";
+	var TelephoneNumber = "telephoneNumber";
+	var Username = "username";
+	var Password = "password";
+}
+
+@:enum
 abstract KeyBoardType(String) {
 	var Default = 'default';
 	var EmailAdress = 'email-address';
@@ -87,6 +118,7 @@ typedef TextInputProps = {
 	?editable:Bool,
 	?keyboardType:KeyBoardType,
 	?maxLength:Float,
+	?maxHeight:Float,
 	?multiline:Bool,
 	?onBlur:Function,
 	?onChange:Function,
@@ -108,8 +140,11 @@ typedef TextInputProps = {
 	?style:TextStyle,
 	?value:String,
 	?testID:String,
+	?textContentType:TextContentType,
+	?allowFontScaling:Bool,
 	// android
 	?disableFullscreenUI:Bool,
+	?autoGrow:Bool,
 	?inlineImageLeft:String,
 	?inlineImagePadding:Float,
 	?numberOfLines:Float,

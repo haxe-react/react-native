@@ -26,7 +26,7 @@ typedef Info = {
 abstract NetInfoEventName(String) to String {
 	var ConnectionChange = 'connectionChange';
 }
-	
+
 @:enum
 abstract ConnectionType(String) to String {
 	

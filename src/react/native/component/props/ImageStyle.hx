@@ -16,6 +16,6 @@ typedef ImageStyle = {
 	?borderWidth:Float,
 	?opacity:Float,
 	// ?overflow:String,
-	?resizeMode:Dynamic<ResizeMode>,
+	?resizeMode:ResizeMode,
 	?tintColor:Color,
 }
