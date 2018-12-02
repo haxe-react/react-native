@@ -29,30 +29,22 @@ abstract NetInfoEventName(String) to String {
 
 @:enum
 abstract ConnectionType(String) to String {
-	
 	var None = 'none';
 	var Wifi = 'wifi';
 	var Cellular = 'cellular';
 	var Unknown = 'unknown';
-	
 #if android
-	
 	var Bluetooth = 'bluetooth';
 	var Ethernet = 'ethernet';
 	var Wimax = 'wimax';
-	
 #end
-
 }
 
-	
 @:enum
 abstract EffectiveConnectionType(String) to String {
-	
 	var _2g = '2g';
 	var _3g = '3g';
 	var _4g = '4g';
 	var Unknown = 'unknown';
-
 }
 
