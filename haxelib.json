@@ -15,6 +15,6 @@
   "version": "0.1.1",
   "dependencies": {
     "react-next": "",
-    "react-core": "https://github.com/haxe-react/haxe-react-core.git",
+    "react-core": "https://github.com/haxe-react/haxe-react-core.git"
   }
 }
