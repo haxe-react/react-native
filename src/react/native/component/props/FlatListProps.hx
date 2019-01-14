@@ -1,8 +1,10 @@
 package react.native.component.props;
 
+import react.ReactNode;
 import react.ReactComponent;
 import haxe.Constraints;
 import haxe.extern.EitherType;
+
 
 private typedef Comp = EitherType<ReactElement, EitherType<Function, Class<ReactComponent>>>;
 
@@ -11,7 +13,7 @@ typedef FlatListProps<T> = {
 	?ItemSeparatorComponent:Comp,
 	?ListEmptyComponent:Comp,
 	?ListFooterComponent:Comp,
-	?ListHeaderComponent:Comp,
+	?ListHeaderComponent:ReactNode,//Comp
 	?columnWrapperStyle:Dynamic,
 	?data:Array<T>,
 	?extraData:Dynamic, 

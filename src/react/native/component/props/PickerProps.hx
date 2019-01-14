@@ -1,7 +1,10 @@
 package react.native.component.props;
 
-import haxe.Constraints;
-import enums.Enums;
+@:enum
+abstract PickerMode(String) {
+	var Dialog = 'dialog';
+	var Dropdown = 'dropdown';
+}
 
 typedef PickerProps = {
 	> ViewProps.ViewPropsWithoutStyle,
@@ -11,7 +14,7 @@ typedef PickerProps = {
 	?testID:String,
 	//android
 	?enabled:Bool,
-	?mode:Enums<'dialog','dropdown'>,
+	?mode:PickerMode,
 	?prompt:String,
 	//ios
 	?itemStyle:Dynamic,

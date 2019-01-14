@@ -1,7 +1,6 @@
 package react.native.component.props;
 
 import haxe.extern.EitherType;
-import enums.Enums;
 
 typedef LayoutProps = {
 	

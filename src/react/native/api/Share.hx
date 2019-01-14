@@ -18,11 +18,17 @@ private typedef Result = {
 private typedef Content = {
 	?title:String,
 	?message:String,
+	#if ios
 	?url:String
+	#end
 }
 
 private typedef Options = {
+	#if android
 	?dialogTitle:String,
+	#elseif ios
 	?excludeActivityTypes:Array<String>,
 	?tintColor:String,
+	?subject:String,//subject to share via email
+	#end
 }

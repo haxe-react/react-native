@@ -1,7 +1,5 @@
 package react.native.component.props;
 
-import enums.Enums;
-
 typedef TextStyle = {
 	> ViewStyle,
 	?color:Color,
@@ -24,4 +22,5 @@ typedef TextStyle = {
 	?textDecorationColor:Color,
 	?textDecorationStyle:String,
 	?writingDirection:String,
+	?textTransform:String,
 }

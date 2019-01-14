@@ -8,13 +8,13 @@
   ],
   "classPath": "src",
   "contributors": [
-    "kevinresol"
+    "kevinresol",
+    "kiroukou"
   ],
   "releasenote": "initial release",
   "version": "0.1.1",
   "dependencies": {
-    "react": "",
-    "react-core": "gh:haxe-react/haxe-react-core",
-    "quick-enums": ""
+    "react-next": "",
+    "react-core": "https://github.com/haxe-react/haxe-react-core.git",
   }
 }

@@ -3,5 +3,13 @@ package react.native.component.props;
 import haxe.Constraints;
 
 typedef TouchableHighlightProps = {
-	> TouchableProps,
+	> TouchableWithoutFeedbackProps,
+	?activeOpacity:Float,
+	?onHideUnderlay:Void->Void,
+	?onShowUnderlay:Void->Void,
+	?underlayColor:String,
+	#if ios 
+	?hasTVPreferredFocus:Bool, 
+	?tvParallaxProperties:Bool,
+	#end
 }

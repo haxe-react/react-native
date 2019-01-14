@@ -1,5 +1,10 @@
 # haxe-react-native
 
+## About this fork
+
+This fork has for aim to improve the externs of haxe-react-native.
+Quick-Enums dependency was removed to avoid the completion server issues, all the differents props have now a better type definition.
+
 ## Quick Start
 
 Follow the steps [here](https://github.com/haxe-react/haxe-react-native-sample) to start writing an app in less than a minute!
@@ -8,7 +13,7 @@ Follow the steps [here](https://github.com/haxe-react/haxe-react-native-sample) 
 
 ##### Install Haxelibs
 
-1. `haxelib install react`
+1. `haxelib install react-next`
 1. `haxelib install react-native`
 
 ##### Setup React Native

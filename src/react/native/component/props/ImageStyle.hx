@@ -1,6 +1,5 @@
 package react.native.component.props;
-
-import enums.Enums;
+import react.native.component.types.ImagePropsTypes;
 
 typedef ImageStyle = {
 	> LayoutProps,
@@ -17,6 +16,6 @@ typedef ImageStyle = {
 	?borderWidth:Float,
 	?opacity:Float,
 	// ?overflow:String,
-	?resizeMode:Dynamic<ImageProps.ResizeMode>,
+	?resizeMode:ResizeMode,
 	?tintColor:Color,
 }

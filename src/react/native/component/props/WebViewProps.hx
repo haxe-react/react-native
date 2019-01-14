@@ -1,8 +1,24 @@
 package react.native.component.props;
 
-import haxe.Constraints;
 import haxe.extern.EitherType;
-import enums.Enums;
+import haxe.Constraints;
+
+@:enum
+abstract MixedContentModeTypes(String)  {
+	var Never = "never";
+	var Always = "always";
+	var Compatibility = "compatibility";
+}
+
+@:enum
+abstract WebViewDataDetectorType(String) {
+	var PhoneNumber = 'phoneNumber';
+	var Link = 'link';
+	var Adress = 'address';
+	var CalendarEvent = 'calendarEvent';
+	var None = 'none';
+	var All = 'all';
+}
 
 typedef WebViewProps = {
 	> ViewProps,
@@ -27,15 +43,13 @@ typedef WebViewProps = {
 	// android
 	?domStorageEnabled:Bool,
 	?javaScriptEnabled:Bool,
-	?mixedContentMode: Enums<'never', 'always', 'compatibility'>,
+	?mixedContentMode: MixedContentModeTypes,
 	?userAgent:String,
 	// ios
 	?allowsInlineMediaPlayback:Bool,
 	?bounces:Bool,
-	?dataDetectorTypes:EitherType<DataDetectorType, Array<DataDetectorType>>,
-	?decelerationRate:Dynamic, // ScrollView.propTypes.decelerationRate,
+	?dataDetectorTypes:EitherType<WebViewDataDetectorType, Array<WebViewDataDetectorType>>,
+	?decelerationRate:Dynamic,
 	?onShouldStartLoadWithRequest:Function,
 	?scrollEnabled:Bool,
 }
-
-private typedef DataDetectorType = Enums<'phoneNumber', 'link', 'address', 'calendarEvent', 'none', 'all'>;

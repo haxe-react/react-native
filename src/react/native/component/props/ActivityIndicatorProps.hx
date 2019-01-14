@@ -1,12 +1,17 @@
 package react.native.component.props;
 
 import haxe.extern.EitherType;
-import enums.Enums;
+
+@:enum
+abstract ActivityIndicatorSizeType(String) to String {
+	var Small = "small";
+	var Large = "large";
+}
 
 typedef ActivityIndicatorProps = {
 	> ViewProps,
 	?animating:Bool, 
 	?color:Color,
-	?size:EitherType<Enums<'small', 'large'>, Float>, 
+	?size:EitherType<ActivityIndicatorSizeType, Float>, 
 	?hidesWhenStopped:Bool,
 }

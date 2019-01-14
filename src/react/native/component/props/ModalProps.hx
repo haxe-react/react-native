@@ -1,20 +1,47 @@
 package react.native.component.props;
 
 import haxe.Constraints;
-import enums.Enums;
-import react.component.props.Props;
+import react.native.component.props.ViewProps;//TODO check, it was typed props directly before
+
+@:enum
+abstract ModalAnimationTypes(String) {
+	var None = "none";
+	var Slide = "slide";
+	var Fade = "fade";
+}
+
+@:enum 
+abstract ModalSpportedOrientations(String) {
+	var  Portrait = 'portrait';
+	var  PortaitUpsideDown = 'portrait-upside-down';
+	var  Landscape = 'landscape';
+	var  LandscapeLeft = 'landscape-left';
+	var  LandscapeRight = 'landscape-right';
+}
+
+@:enum abstract ModalPresentationStyles(String) {
+	var Fullscreen = "fullscreen";
+	var PageSheet = "pageSheet";
+	var FormSheet = "formSheet";
+	var OverFullScreen = "overFullScreen";
+}
 
 typedef ModalProps = {
-	> Props,
-	?animated:Bool,
-	?animationType:Enums<'none', 'slide', 'fade'>,
-	?onShow:Function,
-	?transparent:Bool,
+	> ViewProps,
 	?visible:Bool,
+	?transparent:Bool,
+	?animated:Bool,
+	?animationType:ModalAnimationTypes,
+	
+	?onShow:Function,
+	?onDismiss:Function,
+	
+
 	// android
 	?hardwareAccelerated:Bool,
 	?onRequestClose:Void->Void,
 	// ios
+	?presentationStyle: ModalPresentationStyles,
 	?onOrientationChange:String->Void,
-	?supportedOrientations:Array<Enums<'portrait', 'portrait-upside-down', 'landscape', 'landscape-left', 'landscape-right'>>,
+	?supportedOrientations:Array<ModalSpportedOrientations>,
 }
