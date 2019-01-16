@@ -2,7 +2,7 @@ package react.native.component.props;
 
 import haxe.Constraints;
 
-typedef PickerIOSrops = {
+typedef PickerIOSProps = {
 	> ViewProps,
 	?itemStyle:Dynamic,
 	?onValueChange:Function,
