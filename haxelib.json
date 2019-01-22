@@ -1,20 +1,20 @@
 {
-  "name": "react-native",
-  "license": "MIT",
-  "url": "https://github.com/haxe-react/haxe-react-native",
-  "tags": [
-    "react",
-    "native"
-  ],
-  "classPath": "src",
-  "contributors": [
-    "kevinresol",
-    "kiroukou",
-    "zabojad"
-  ],
-  "releasenote": "initial release",
-  "version": "0.1.1",
-  "dependencies": {
-    "react-next": ""
-  }
+	"name": "react-native",
+	"classPath": "src",
+	"dependencies": {
+		"react-next": ""
+	},
+	"url": "https://github.com/haxe-react/haxe-react-native",
+	"contributors": [
+		"kevinresol",
+		"kiroukou",
+		"zabojad"
+	],
+	"version": "0.2.0",
+	"releasenote": "Various updates",
+	"tags": [
+		"react",
+		"native"
+	],
+	"license": "MIT"
 }
