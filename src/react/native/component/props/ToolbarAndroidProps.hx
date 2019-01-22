@@ -1,11 +1,10 @@
 package react.native.component.props;
 
 import haxe.Constraints;
-import enums.Enums;
 
 typedef ToolbarAndroidProps = {
 	> ViewProps,
-	?actions:Array<{title:String, ?icon:ImageSource, ?show:Enums<'always', 'ifRoom', 'never'>, ?showWithText:Bool}>,
+	?actions:Array<{title:String, ?icon:ImageSource, ?show:ToolbarAndroidActionsShow, ?showWithText:Bool}>,
 	?contentInsetEnd:Float,
 	?contentInsetStart:Float,
 	?logo:ImageSource,
@@ -19,4 +18,11 @@ typedef ToolbarAndroidProps = {
 	?testID:String,
 	?title:String,
 	?titleColor:Color,
+}
+
+@:enum
+abstract ToolbarAndroidActionsShow(String) to String {
+	var Always = 'always';
+	var IfRoom = 'ifRoom';
+	var Never = 'never';
 }

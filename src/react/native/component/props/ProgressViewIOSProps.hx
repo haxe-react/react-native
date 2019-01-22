@@ -1,14 +1,19 @@
 package react.native.component.props;
 
 import haxe.Constraints;
-import enums.Enums;
 
 typedef ProgressViewIOSProps = {
 	> ViewProps,
 	?progress:Float,
 	?progressImage:ImageSource,
 	?progressTintColor:String,
-	?progressViewStyle:Enums<'default', 'bar'>,
+	?progressViewStyle:ProgressViewIOSProgressViewStyle,
 	?trackImage:ImageSource,
 	?trackTintColor:String,
+}
+
+@:enum
+abstract ProgressViewIOSProgressViewStyle(String) to String {
+	var Default = 'default';
+	var Bar = 'bar';
 }

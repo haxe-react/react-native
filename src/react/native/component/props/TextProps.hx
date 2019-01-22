@@ -1,10 +1,11 @@
 package react.native.component.props;
 import react.native.component.types.TextPropsTypes;
+import react.BaseProps;
 
 import haxe.Constraints;
 
 typedef TextProps = {
-	//> Props, TODO REMOVED
+	> BasePropsWithChildren,
 	?accessible:Bool,
 	?allowFontScaling:Bool,
 	?ellipsizeMode:EllipseModeTypes,

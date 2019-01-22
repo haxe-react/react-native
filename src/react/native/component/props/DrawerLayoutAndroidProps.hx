@@ -1,15 +1,14 @@
 package react.native.component.props;
 
 import haxe.Constraints;
-import enums.Enums;
 
 typedef DrawerLayoutAndroidProps = {
 	> ViewProps,
 	?drawerBackgroundColor:Color,
-	?drawerLockMode:Enums<'unlocked', 'locked-closed', 'locked-open'>,
+	?drawerLockMode:DrawerLayoutAndroidDrawerLockMode,
 	?drawerPosition:DrawerPosition,
 	?drawerWidth:Float,
-	?keyboardDismissMode:Enums<'none', 'on-drag'>,
+	?keyboardDismissMode:DrawerLayoutAndroidKeyboardDismissMode,
 	?onDrawerClose:Function,
 	?onDrawerOpen:Function,
 	?onDrawerSlide:Function,
@@ -19,3 +18,17 @@ typedef DrawerLayoutAndroidProps = {
 }
 
 abstract DrawerPosition(Dynamic) {}
+
+
+@:enum
+abstract DrawerLayoutAndroidDrawerLockMode(String) to String {
+	var Unlocked = 'unlocked';
+	var LockedClosed = 'locked-closed';
+	var LockedOpen = 'locked-open';
+}
+
+@:enum
+abstract DrawerLayoutAndroidKeyboardDismissMode(String) to String {
+	var None = 'none';
+	var OnDrag = 'on-drag';
+}

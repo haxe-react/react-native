@@ -1,7 +1,6 @@
 package react.native.component.props;
 
 import haxe.Constraints;
-import enums.Enums;
 
 typedef DatePickerIOSProps = {
 	> ViewProps,
@@ -9,7 +8,15 @@ typedef DatePickerIOSProps = {
 	?maximumDate:Date,
 	?minimumDate:Date,
 	?minuteInterval:Int,
-	?mode:Enums<'date', 'time', 'datetime'>, 
+	?mode:DatePickerIOSMode, 
 	onDateChange:Function, 
 	?timeZoneOffsetInMinutes:Int,
+}
+
+
+@:enum
+abstract DatePickerIOSMode(String) to String {
+	var Date = 'date';
+	var Time = 'time';
+	var DateTime = 'datetime';
 }

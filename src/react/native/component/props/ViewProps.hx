@@ -1,5 +1,6 @@
 package react.native.component.props;
 
+import react.BaseProps;
 import react.native.component.types.AccessibilityTypes;
 import react.native.component.types.EventTypes;
 import haxe.Constraints;
@@ -11,7 +12,7 @@ typedef ViewProps = {
 }
 
 typedef ViewPropsWithoutStyle = {
-	//> Props, REMOVED
+	> BasePropsWithChildren,
 	?accessibilityLabel:Node,
 	?accessible:Bool,
 	?hitSlop:{top:Int, left:Int, bottom:Int, right:Int},

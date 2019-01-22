@@ -4,9 +4,10 @@ import haxe.Constraints;
 import haxe.extern.EitherType;
 import react.native.component.types.ImagePropsTypes;
 import react.ReactComponent.ReactFragment;
+import react.BaseProps;
 
 typedef ImageProps = {
-	//> Props,
+	> BasePropsWithChildren,
 	?onError:Function,
 	?onLayout:Function,
 	?onLoad:Function,

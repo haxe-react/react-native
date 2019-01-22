@@ -3,9 +3,10 @@ package react.native.component.props;
 import haxe.Constraints;
 import haxe.extern.EitherType;
 import react.ReactNode;
+import react.BaseProps;
 
 typedef ButtonProps = {
-	//> Props,
+	> BasePropsWithChildren,
 	?accessibilityLabel:ReactNode,
 	?color:String,
 	?disabled:Bool,
