@@ -1,16 +1,17 @@
 package react.native.component.props;
 
+import react.native.component.types.AccessibilityTypes;
+import react.native.component.types.EventTypes;
 import haxe.Constraints;
 import haxe.extern.EitherType;
-import react.component.props.Props;
-import enums.Enums;
 
 typedef ViewProps = {
 	> ViewPropsWithoutStyle,
-	?style:ViewStyle,
+	?style:haxe.extern.EitherType<ViewStyle, Array<ViewStyle>>,//after
 }
+
 typedef ViewPropsWithoutStyle = {
-	> Props,
+	//> Props, REMOVED
 	?accessibilityLabel:Node,
 	?accessible:Bool,
 	?hitSlop:{top:Int, left:Int, bottom:Int, right:Int},
@@ -27,21 +28,19 @@ typedef ViewPropsWithoutStyle = {
 	?onResponderTerminationRequest:Function,
 	?onStartShouldSetResponder:Function,
 	?onStartShouldSetResponderCapture:Function,
-	?pointerEvents:Enums<'box-none', 'none', 'box-only', 'auto'>,
+	?pointerEvents:PointEventTypes,
 	?removeClippedSubviews:Bool,
 	?testID:String,
 	// android
-	?accessibilityComponentType:Enums<'none', 'button', 'radiobutton_checked', 'radiobutton_unchecked'>,
-	?accessibilityLiveRegion:Enums<'none', 'polite', 'assertive'>,
+	?accessibilityComponentType:AccessibilityComponentType,
+	?accessibilityLiveRegion:AccessibilityLiveRegion,
 	?collapsable:Bool,
-	?importantForAccessibility:Enums<'auto', 'yes', 'no', 'no-hide-descendants'>,
+	?importantForAccessibility:ImportantForAccessibility,
 	?needsOffscreenAlphaCompositing:Bool,
 	?renderToHardwareTextureAndroid:Bool,
 	// ios
-	?accessibilityTraits:EitherType<AccessibilityTraits, Array<AccessibilityTraits>>,
+	?accessibilityTraits:EitherType<AccessibilityTraitsTypes, Array<AccessibilityTraitsTypes>>,
 	?accessibilityViewIsModal:Bool,
 	?shouldRasterizeIOS:Bool,
 }
-
-typedef AccessibilityTraits = Enums<'none', 'button', 'link', 'header', 'search', 'image', 'selected', 'plays', 'key', 'text', 'summary', 'disabled', 'frequentUpdates', 'startsMedia', 'adjustable', 'allowsDirectInteraction', 'pageTurn'>;
 

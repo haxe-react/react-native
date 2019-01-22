@@ -1,7 +1,5 @@
 package react.native.component.props;
 
-import enums.Enums;
-
 typedef ScrollViewStyle = {
 	> LayoutProps,
 	> Transforms,
