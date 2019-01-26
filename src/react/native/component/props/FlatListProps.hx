@@ -7,9 +7,9 @@ import haxe.extern.EitherType;
 
 typedef FlatListProps<T> = {
 	> ScrollViewProps,
-	?ItemSeparatorComponent:Comp,
-	?ListEmptyComponent:Comp,
-	?ListFooterComponent:Comp,
+	?ItemSeparatorComponent:ReactNode,
+	?ListEmptyComponent:ReactNode,
+	?ListFooterComponent:ReactNode,
 	?ListHeaderComponent:ReactNode,
 	?columnWrapperStyle:Dynamic,
 	?data:Array<T>,
