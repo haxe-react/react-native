@@ -5,7 +5,7 @@ import react.ReactComponent;
 import react.BaseProps;
 
 typedef TouchableProps = {
-	> BasePropsWithChildren,
+	> BasePropsWithChild,
 	?onPress:Function,
 	?onPressOut:Function,
 	?onPressIn:Function,
