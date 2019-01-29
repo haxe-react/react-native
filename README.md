@@ -1,10 +1,5 @@
 # haxe-react-native
 
-## About this fork
-
-This fork has for aim to improve the externs of haxe-react-native.
-Quick-Enums dependency was removed to avoid the completion server issues, all the differents props have now a better type definition.
-
 ## Quick Start
 
 Follow the steps [here](https://github.com/haxe-react/haxe-react-native-sample) to start writing an app in less than a minute!
@@ -61,7 +56,6 @@ class App extends ReactComponent
 build.hxml
 
 ```
--lib react
 -lib react-native
 
 -cp src
