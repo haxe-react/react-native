@@ -31,8 +31,15 @@ extern class Animated {
 	function interpolate(config:InterpolationConfigType):Animated;
 }
 
+
+@:forward
+abstract AnimatedValue(AnimatedValueImpl) from AnimatedValueImpl to AnimatedValueImpl {
+  @:from static function fromFloat(f:Float) return cast new AnimatedValueImpl(f);
+  @:to function toFloat():Float return (this :AnimatedValueImpl).getValue();
+}
+
 @:jsRequire('react-native', 'Animated.Value')
-extern class AnimatedValue extends Animated {
+extern class AnimatedValueImpl extends Animated {
 	function new(v:Float);
 	@:native('__getValue')
 	function getValue():Float;

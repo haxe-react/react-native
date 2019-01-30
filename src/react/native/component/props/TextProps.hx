@@ -5,7 +5,7 @@ import react.BaseProps;
 import haxe.Constraints;
 
 typedef TextProps = {
-	> BasePropsWithChildren,
+	> BasePropsWithOptChildren,
 	?accessible:Bool,
 	?allowFontScaling:Bool,
 	?ellipsizeMode:EllipseModeTypes,

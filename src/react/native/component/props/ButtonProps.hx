@@ -6,7 +6,7 @@ import react.ReactNode;
 import react.BaseProps;
 
 typedef ButtonProps = {
-	> BasePropsWithChildren,
+	> BasePropsWithoutChildren,
 	?accessibilityLabel:ReactNode,
 	?color:String,
 	?disabled:Bool,

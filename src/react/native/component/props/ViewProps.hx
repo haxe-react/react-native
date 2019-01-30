@@ -12,7 +12,7 @@ typedef ViewProps = {
 }
 
 typedef ViewPropsWithoutStyle = {
-	> BasePropsWithChildren,
+	> BasePropsWithOptChildren,
 	?accessibilityLabel:Node,
 	?accessible:Bool,
 	?hitSlop:{top:Int, left:Int, bottom:Int, right:Int},

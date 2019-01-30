@@ -2,8 +2,7 @@ package react.native.component.props;
 
 import react.native.api.Animated.AnimatedValue;
 
-typedef ViewStyleProps = {
-
+typedef AnimatedViewStyleProps = {
 	?backfaceVisibility:String,
 	?backgroundColor:Color,
 	?borderBottomColor:Color,
@@ -22,7 +21,6 @@ typedef ViewStyleProps = {
 	?borderTopRightRadius:Float,
 	?borderTopWidth:Float,
 	?borderWidth:Float,
-	?opacity:AnimatedValue,
+	?opacity:Float,
 	?androidelevation:Float,
-
 }

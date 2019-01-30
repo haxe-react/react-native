@@ -7,7 +7,7 @@ import react.ReactComponent.ReactFragment;
 import react.BaseProps;
 
 typedef ImageProps = {
-	> BasePropsWithChildren,
+	> BasePropsWithOptChildren,
 	?onError:Function,
 	?onLayout:Function,
 	?onLoad:Function,
