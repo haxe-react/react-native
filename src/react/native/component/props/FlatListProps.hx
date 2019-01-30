@@ -7,17 +7,10 @@ import haxe.Constraints;
 
 typedef FlatListProps<T> = {
 	> ScrollViewProps,
-<<<<<<< HEAD
 	?ItemSeparatorComponent:ReactType,
 	?ListEmptyComponent:ReactType,
 	?ListFooterComponent:ReactType,
 	?ListHeaderComponent:ReactType,
-=======
-	?ItemSeparatorComponent:ReactNode,
-	?ListEmptyComponent:ReactNode,
-	?ListFooterComponent:ReactNode,
-	?ListHeaderComponent:ReactNode,
->>>>>>> 0e219f14768ffe885daef03dd605e94738b36a45
 	?columnWrapperStyle:Dynamic,
 	?data:Array<T>,
 	?extraData:Dynamic, 
