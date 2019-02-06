@@ -2,12 +2,12 @@ package react.native.component.props;
 
 import haxe.Constraints;
 import haxe.extern.EitherType;
-import react.ReactNode;
+import react.ReactType;
 import react.BaseProps;
 
 typedef ButtonProps = {
 	> BasePropsWithoutChildren,
-	?accessibilityLabel:ReactNode,
+	?accessibilityLabel:ReactType,
 	?color:String,
 	?disabled:Bool,
 	onPress:EitherType<Void->Void, Void->Dynamic>,

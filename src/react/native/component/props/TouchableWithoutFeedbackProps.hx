@@ -10,7 +10,7 @@ typedef TouchableWithoutFeedbackProps = {
 	//?accessibilityComponentType:AccessibilityComponentTypes, - DEPRECATED
 	//TODO HERE
 	//?accessibilityHint:String,
-	//?accessibilityLabel:ReactNode,
+	//?accessibilityLabel:ReactType,
 	//?accessibilityRole:AccessibilityRoles,
 	//?accessibilityStates:Array<AccessibilityStates>,
 	//?accessibilityTraits - DEPRECATED
