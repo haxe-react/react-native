@@ -13,6 +13,8 @@ typedef ScrollViewProps = {
 	?keyboardShouldPersistTaps:EitherType<KeyboardPersistType, Bool>,
 	?onContentSizeChange:Function,
 	?onScroll:Function,
+	?onMomentumScrollBegin:Function,
+	?onMomentumScrollEnd:Function,
 	?pagingEnabled:Bool,
 	?refreshControl:Element,
 	?removeClippedSubviews:Bool,
