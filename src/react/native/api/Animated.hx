@@ -22,6 +22,7 @@ extern class Animated {
 	static function modulo(a:EitherType<Animated, Float>, modulus:Float):Animated;
 	static function diffClamp(a:Animated, min:Float, max:Float):Animated;
 	static function delay(time:Float):CompositeAnimation;
+	static function loop(anim:CompositeAnimation,cfg:{?iterations:Int}):CompositeAnimation;
 	static function sequence(animations:Array<CompositeAnimation>):CompositeAnimation;
 	static function parallel(animations:Array<CompositeAnimation>, ?config:ParallelConfig):CompositeAnimation;
 	static function stagger(time:Float, animations:Array<CompositeAnimation>):CompositeAnimation;
