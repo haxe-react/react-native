@@ -15,7 +15,7 @@ typedef ImageProps = {
 	?onLoadStart:Function,
 	?resizeMode:ResizeMode,
 	?source:ImageSource,
-	?style:ImageStyle,
+	?style:haxe.extern.EitherType<ImageStyle, Array<ImageStyle>>,
 	?testID:String,
 	?borderRadius:Int,
 	// android
