@@ -20,7 +20,6 @@ typedef TouchableWithoutFeedbackProps = {
 	?delayPressOut:Float,
 	?disabled:Bool,
 	?onLayout:{nativeEvent: {layout: {x:Float, y:Float, width:Float, height:Float}}} -> Void,
-	?onLongPress:Void->Void,
 	
 	//?onPressIn:Null<Dynamic>->Void,
 	//?onPressOut:Null<Dynamic>->Void,

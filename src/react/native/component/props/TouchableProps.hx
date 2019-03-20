@@ -13,6 +13,7 @@ typedef TouchableProps = {
 	?disabled:Bool,
 	?delayPressIn:Float,
 	?delayPressOut:Float,
+	?onLongPress:Function,
 	?delayLongPress:Float,
 	?hitSlop:{top:Float, bottom:Float, left:Float, right:Float},
 }

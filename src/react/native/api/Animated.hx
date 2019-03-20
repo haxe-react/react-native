@@ -29,7 +29,7 @@ extern class Animated {
 	static function event(argMapping:Array<Mapping>, ?config:EventConfig):Dynamic;
 	static function createAnimatedComponent(component:Dynamic):Dynamic;
 	
-	function interpolate(config:InterpolationConfigType):Animated;
+	function interpolate(config:InterpolationConfigType):AnimatedValue;
 }
 
 
@@ -70,7 +70,7 @@ extern class AnimatedValueXY extends Animated {
 }
 
 @:jsRequire('react-native', 'Animated.View')
-extern class AnimatedView extends ReactComponentOfProps<{>ViewProps,}> {}
+extern class AnimatedView extends ReactComponentOfProps<{>AnimatedViewProps,}> {}
 
 @:jsRequire('react-native', 'Animated.ScrollView')
 extern class AnimatedScrollView extends ReactComponentOfProps<{>ScrollViewProps,}> {
