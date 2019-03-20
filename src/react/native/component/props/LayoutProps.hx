@@ -3,16 +3,11 @@ package react.native.component.props;
 import haxe.extern.EitherType;
 
 typedef LayoutProps = {
-	
 	?alignContent:String,
 	?alignItems:String,
 	?alignSelf:String,
 	?aspectRatio:Float,
-	?borderBottomWidth:Float,
-	?borderLeftWidth:Float,
-	?borderRightWidth:Float,
-	?borderTopWidth:Float,
-	?borderWidth:Float,
+
 	?bottom:EitherType<Float, String>,
 	?display:String,
 	?flex:Float,
