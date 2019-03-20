@@ -142,6 +142,7 @@ typedef TextInputProps = {
 	?testID:String,
 	?textContentType:TextContentType,
 	?allowFontScaling:Bool,
+	?textAlignVertical:String,
 	// android
 	?disableFullscreenUI:Bool,
 	?autoGrow:Bool,

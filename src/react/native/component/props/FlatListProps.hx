@@ -23,6 +23,7 @@ typedef FlatListProps<T> = {
 	?keyExtractor:T->Int->String,
 	?legacyImplementation:Bool,
 	?numColumns:Int,
+	?progressViewOffset:Float,
 	?onEndReached:{distanceFromEnd:Float}->Void,
 	?onEndReachedThreshold:Float,
 	?onRefresh:Void->Void,
