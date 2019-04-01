@@ -8,6 +8,7 @@ typedef TextProps = {
 	> BasePropsWithOptChildren,
 	?accessible:Bool,
 	?allowFontScaling:Bool,
+	?maxFontSizeMultiplier:Float,
 	?ellipsizeMode:EllipseModeTypes,
 	?numberOfLines:Int,
 	?onLayout:Function,
