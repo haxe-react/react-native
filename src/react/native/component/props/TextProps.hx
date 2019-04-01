@@ -25,6 +25,4 @@ typedef TextProps = {
 	?adjustsFontSizeToFit:Bool,
 	?minimumFontScale:Float,
 	?suppressHighlighting:Bool,
-
-	?maxFontSizeMultiplier:Int,
 }
