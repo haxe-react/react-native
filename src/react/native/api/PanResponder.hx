@@ -4,7 +4,23 @@ import react.native.NativeEvent;
 @:jsRequire('react-native', 'PanResponder')
 extern class PanResponder {
 	public static function create(config:PanResponderConfig):PanResponder;
-	var panHandlers:Dynamic;
+	var panHandlers:PanHandlers;
+}
+
+extern class PressEvent {}
+typedef PanHandlers = {
+	onStartShouldSetResponder:PressEvent->Bool,
+	onMoveShouldSetResponder:PressEvent->Bool,
+	onStartShouldSetResponderCapture:PressEvent->Bool,
+	onMoveShouldSetResponderCapture:PressEvent->Bool,
+	onResponderGrant:PressEvent->Bool,
+	onResponderReject:PressEvent->Bool,
+	onResponderRelease:PressEvent->Bool,
+	onResponderStart:PressEvent->Bool,
+	onResponderMove:PressEvent->Bool,
+	onResponderEnd:PressEvent->Bool,
+	onResponderTerminate:PressEvent->Bool,
+	onResponderTerminationRequest:PressEvent->Bool,
 }
 
 typedef PanResponderConfig = {
