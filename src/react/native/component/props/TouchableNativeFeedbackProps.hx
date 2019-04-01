@@ -4,6 +4,8 @@ import haxe.Constraints;
 
 typedef TouchableNativeFeedbackProps = {
 	> TouchableProps,
-	?background:Dynamic,
+	?background:TouchableNativeFeedbackBackground,
 	?useForeground:Bool,
 }
+
+extern class TouchableNativeFeedbackBackground {}
