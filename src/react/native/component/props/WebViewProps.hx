@@ -52,4 +52,5 @@ typedef WebViewProps = {
 	?decelerationRate:Dynamic,
 	?onShouldStartLoadWithRequest:Function,
 	?scrollEnabled:Bool,
+	?useWebKit:Bool,
 }
