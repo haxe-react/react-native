@@ -18,3 +18,9 @@ extern class Dimensions {
 	static function addEventListener(type:String,handler:DimensionsData->Void):Void;
 	static function removeEventListener(type:String,handler:DimensionsData->Void):Void;
 }
+
+
+@:enum abstract DimensionTarget(String) from String {
+	var Window = 'window';
+	var Screen = 'screen';
+}

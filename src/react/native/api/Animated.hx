@@ -35,8 +35,9 @@ extern class Animated {
 
 @:forward
 abstract AnimatedValue(AnimatedValueImpl) from AnimatedValueImpl to AnimatedValueImpl {
-  @:from static function fromFloat(f:Float) return cast new AnimatedValueImpl(f);
-  @:to function toFloat():Float return (this :AnimatedValueImpl).getValue();
+	public inline function new(v) this = new AnimatedValueImpl(v);
+	@:from static function fromFloat(f:Float) return cast new AnimatedValueImpl(f);
+	@:to function toFloat():Float return (this :AnimatedValueImpl).getValue();
 }
 
 @:jsRequire('react-native', 'Animated.Value')
