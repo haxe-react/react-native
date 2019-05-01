@@ -4,6 +4,7 @@ import haxe.Constraints;
 
 typedef DatePickerIOSProps = {
 	> ViewProps,
+	?locale:String,
 	date:Date,
 	?maximumDate:Date,
 	?minimumDate:Date,

@@ -137,7 +137,7 @@ typedef TextInputProps = {
 	?selectTextOnFocus:Bool,
 	?selection:{start:Int, end:Int},
 	?selectionColor:Color,
-	?style:TextStyle,
+	?style:haxe.extern.EitherType<TextStyle, Array<TextStyle>>,
 	?value:String,
 	?testID:String,
 	?textContentType:TextContentType,

@@ -1,6 +1,5 @@
 package react.native.component.types;
 
-
 @:enum
 abstract EllipseModeTypes(String) {
     var Head = 'head';
@@ -8,7 +7,6 @@ abstract EllipseModeTypes(String) {
     var Tail = 'tail';
     var Clip = 'clip';
 }
-
 
 @:enum
 abstract TextBreakStrategyTypes(String) {

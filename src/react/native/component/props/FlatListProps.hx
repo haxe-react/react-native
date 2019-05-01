@@ -7,6 +7,7 @@ import haxe.Constraints;
 
 typedef FlatListProps<T> = {
 	> ScrollViewProps,
+	?initialScrollIndex:Int,
 	?ItemSeparatorComponent:ReactType,
 	?ListEmptyComponent:ReactType,
 	?ListFooterComponent:ReactType,
