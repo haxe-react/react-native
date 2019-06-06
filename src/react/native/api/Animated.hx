@@ -66,7 +66,7 @@ extern class AnimatedValueXY extends Animated {
 	function stopAnimation(?callback:{x:Float, y:Float}->Void):Void;
 	function addListener(callback:ValueXYListenerCallback):String;
 	function removeListener(id:String):Void;
-	function getLayout(v:{x:AnimatedValue, y:AnimatedValue}):{left:AnimatedValue, top:AnimatedValue};
+	function getLayout():{left:AnimatedValue, top:AnimatedValue};
 	function getTranslateTransform():Array<Dynamic<AnimatedValue>>;
 }
 
