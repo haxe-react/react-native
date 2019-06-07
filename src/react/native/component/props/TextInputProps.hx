@@ -161,7 +161,7 @@ typedef TextInputProps = {
 	?dataDetectorTypes:EitherType<DataDetectorType, Array<DataDetectorType>>,
 	?enablesReturnKeyAutomatically:Bool,
 	?keyboardAppearance:KeyboardAppearanceType,
-	?onKeyPress:Function,
+	?onKeyPress:{nativeEvent:{key:String}}->Void,
 	?selectionState:Dynamic, // DocumentSelectionState,
 	?spellCheck:Bool,
 }
