@@ -34,8 +34,11 @@ abstract TextContentType(String)
 	var Password = "password";
 }
 
+@:deprecated('KeyBoardType is deprecated, use KeyboardType instead')
+typedef KeyBoardType = KeyboardType;
+
 @:enum
-abstract KeyBoardType(String) {
+abstract KeyboardType(String) {
 	var Default = 'default';
 	var EmailAddress = 'email-address';
 	var Numeric = 'numeric';
@@ -116,7 +119,7 @@ typedef TextInputProps = {
 	?caretHidden:Bool,
 	?defaultValue:String,
 	?editable:Bool,
-	?keyboardType:KeyBoardType,
+	?keyboardType:KeyboardType,
 	?maxLength:Float,
 	?maxHeight:Float,
 	?multiline:Bool,
