@@ -6,12 +6,14 @@ import haxe.extern.EitherType;
 abstract ActivityIndicatorSizeType(String) to String {
 	var Small = "small";
 	var Large = "large";
+	
+	@:from public static inline function fromFloat(f:Float):ActivityIndicatorSizeType return cast f;
 }
 
 typedef ActivityIndicatorProps = {
 	> ViewProps,
 	?animating:Bool, 
 	?color:Color,
-	?size:EitherType<ActivityIndicatorSizeType, Float>, 
+	?size:ActivityIndicatorSizeType, 
 	?hidesWhenStopped:Bool,
 }
