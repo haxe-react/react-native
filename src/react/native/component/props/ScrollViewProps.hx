@@ -2,6 +2,7 @@ package react.native.component.props;
 
 import react.native.component.types.AnimationTypes;
 import react.native.component.types.ViewPropTypes;
+import react.ReactComponent;
 import haxe.Constraints;
 import haxe.extern.EitherType;
 
@@ -16,7 +17,7 @@ typedef ScrollViewProps = {
 	?onMomentumScrollBegin:Function,
 	?onMomentumScrollEnd:Function,
 	?pagingEnabled:Bool,
-	?refreshControl:Element,
+	?refreshControl:ReactSingleFragment,
 	?removeClippedSubviews:Bool,
 	?scrollEnabled:Bool,
 	?showsHorizontalScrollIndicator:Bool,
