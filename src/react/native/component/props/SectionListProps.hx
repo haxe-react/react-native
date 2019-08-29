@@ -19,7 +19,6 @@ typedef SectionListProps<T, S:{data:Array<T>}> = {
 	?onEndReachedThreshold:Float,
 	?onRefresh:Void->Void,
 	?onViewableItemsChanged:{viewableItems:Array<ViewToken>, changed:Array<ViewToken>}->Void,
-	?iewableItems:Array<ViewToken>,
 	?hanged:Array<ViewToken>,
 	?refreshing:Bool,
 	?renderItem:{item:T, index:Int, section:S}->ReactFragment,
