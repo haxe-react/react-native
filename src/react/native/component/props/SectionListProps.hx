@@ -2,13 +2,14 @@ package react.native.component.props;
 
 import react.ReactComponent;
 import haxe.Constraints;
+import haxe.extern.EitherType;
 
 typedef SectionListProps<T, S:{data:Array<T>}> = {
 	> ScrollViewProps,
-	?ItemSeparatorComponent:Class<ReactComponent>,
-	?ListFooterComponent:Class<ReactComponent>,
-	?ListHeaderComponent:Class<ReactComponent>,
-	?SectionSeparatorComponent:Class<ReactComponent>,
+	?ItemSeparatorComponent:EitherType<Class<ReactComponent>, Function>,
+	?ListFooterComponent:EitherType<Class<ReactComponent>, Function>,
+	?ListHeaderComponent:EitherType<Class<ReactComponent>, Function>,
+	?SectionSeparatorComponent:EitherType<Class<ReactComponent>, Function>,
 	?extraData:Any,
 	sections:Array<S>,
 	?inverted:Bool,
@@ -18,6 +19,7 @@ typedef SectionListProps<T, S:{data:Array<T>}> = {
 	?onEndReachedThreshold:Float,
 	?onRefresh:Void->Void,
 	?onViewableItemsChanged:{viewableItems:Array<ViewToken>, changed:Array<ViewToken>}->Void,
+	?iewableItems:Array<ViewToken>,
 	?hanged:Array<ViewToken>,
 	?refreshing:Bool,
 	?renderItem:{item:T, index:Int, section:S}->ReactFragment,
