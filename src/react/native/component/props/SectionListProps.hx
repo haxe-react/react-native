@@ -18,12 +18,11 @@ typedef SectionListProps<T, S:{data:Array<T>}> = {
 	?onEndReachedThreshold:Float,
 	?onRefresh:Void->Void,
 	?onViewableItemsChanged:{viewableItems:Array<ViewToken>, changed:Array<ViewToken>}->Void,
-	?iewableItems:Array<ViewToken>,
 	?hanged:Array<ViewToken>,
 	?refreshing:Bool,
 	?renderItem:{item:T, index:Int, section:S}->ReactFragment,
-	?renderSectionHeader:{section:S}->ReactFragment,
-	?renderSectionFooter:{section:S}->ReactFragment,
+	?renderSectionHeader:{section:{title:String, ?data:Array<T>}}->ReactFragment,
+	?renderSectionFooter:{section:{title:String, ?data:Array<T>}}->ReactFragment,
 	?stickySectionHeadersEnabled:Bool,
 }
 
