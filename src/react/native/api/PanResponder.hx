@@ -24,19 +24,23 @@ typedef PanHandlers = {
 }
 
 typedef PanResponderConfig = {
-	?onMoveShouldSetPanResponder:NativeEvent->GestureState->Bool,
-	?onMoveShouldSetPanResponderCapture:NativeEvent->GestureState->Bool,
-	?onStartShouldSetPanResponder:NativeEvent->GestureState->Bool,
-	?onStartShouldSetPanResponderCapture:NativeEvent->GestureState->Bool,
-	?onPanResponderReject:NativeEvent->GestureState->Void,
-	?onPanResponderGrant:NativeEvent->GestureState->Void,
-	?onPanResponderStart:NativeEvent->GestureState->Void,
-	?onPanResponderEnd:NativeEvent->GestureState->Void,
-	?onPanResponderRelease:NativeEvent->GestureState->Void,
-	?onPanResponderMove:NativeEvent->GestureState->Void,
-	?onPanResponderTerminate:NativeEvent->GestureState->Void,
-	?onPanResponderTerminationRequest:NativeEvent->GestureState->Bool,
-	?onShouldBlockNativeResponder:NativeEvent->GestureState->Void,
+	?onMoveShouldSetPanResponder:ResponderSyntheticEvent->GestureState->Bool,
+	?onMoveShouldSetPanResponderCapture:ResponderSyntheticEvent->GestureState->Bool,
+	?onStartShouldSetPanResponder:ResponderSyntheticEvent->GestureState->Bool,
+	?onStartShouldSetPanResponderCapture:ResponderSyntheticEvent->GestureState->Bool,
+	?onPanResponderReject:ResponderSyntheticEvent->GestureState->Void,
+	?onPanResponderGrant:ResponderSyntheticEvent->GestureState->Void,
+	?onPanResponderStart:ResponderSyntheticEvent->GestureState->Void,
+	?onPanResponderEnd:ResponderSyntheticEvent->GestureState->Void,
+	?onPanResponderRelease:ResponderSyntheticEvent->GestureState->Void,
+	?onPanResponderMove:ResponderSyntheticEvent->GestureState->Void,
+	?onPanResponderTerminate:ResponderSyntheticEvent->GestureState->Void,
+	?onPanResponderTerminationRequest:ResponderSyntheticEvent->GestureState->Bool,
+	?onShouldBlockNativeResponder:ResponderSyntheticEvent->GestureState->Void,
+}
+
+extern class ResponderSyntheticEvent {
+	var nativeEvent(default, never):NativeEvent;
 }
 
 typedef GestureState = {
