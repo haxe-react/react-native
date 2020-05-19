@@ -20,5 +20,6 @@ typedef ViewStyleProps = {
 	?borderTopWidth:Float,
 	?borderWidth:Float,
 	?opacity:Float,
-	?androidelevation:Float,
+	//android
+	?elevation:Int
 }
