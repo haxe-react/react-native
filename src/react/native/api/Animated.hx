@@ -66,8 +66,11 @@ extern class AnimatedValueXY extends Animated {
 	function stopAnimation(?callback:{x:Float, y:Float}->Void):Void;
 	function addListener(callback:ValueXYListenerCallback):String;
 	function removeListener(id:String):Void;
+	function removeAllListeners():Void;
 	function getLayout():{left:AnimatedValue, top:AnimatedValue};
 	function getTranslateTransform():Array<Dynamic<AnimatedValue>>;
+	var x:EitherType<Float,Mapping>;
+	var y:EitherType<Float,Mapping>;
 }
 
 @:jsRequire('react-native', 'Animated.View')
