@@ -1,9 +1,9 @@
--D react-next=1.107.0
-# @install: lix --silent download "gh://github.com/kLabz/haxe-react#f1f7180771fc4e6ca7f24424405657aeb4f51502" into react-next/1.107.0/github/f1f7180771fc4e6ca7f24424405657aeb4f51502
--lib tink_hxx
+-D react-next=1.119.0
+# @install: lix --silent download "haxelib:/react-next#1.119.0" into react-next/1.119.0/haxelib
 -lib js-object
--cp ${HAXE_LIBCACHE}/react-next/1.107.0/github/f1f7180771fc4e6ca7f24424405657aeb4f51502/src/lib
+-lib tink_hxx
+-cp ${HAXE_LIBCACHE}/react-next/1.119.0/haxelib/src/lib
 --macro react.jsx.JsxStaticMacro.addHook()
 --macro addGlobalMetadata('', '@:build(react.jsx.JsxStaticMacro.build())')
 
--D react=1.107.0
+-D react=1.119.0
