@@ -32,6 +32,8 @@ abstract TextContentType(String)
 	var TelephoneNumber = "telephoneNumber";
 	var Username = "username";
 	var Password = "password";
+	var NewPassword = "newPassword";
+	var OneTimeCode = "oneTimeCode";
 }
 
 @:deprecated('KeyBoardType is deprecated, use KeyboardType instead')
