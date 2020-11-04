@@ -16,4 +16,5 @@ typedef TouchableProps = {
 	?onLongPress:Function,
 	?delayLongPress:Float,
 	?hitSlop:{top:Float, bottom:Float, left:Float, right:Float},
+	?testID:String,
 }
