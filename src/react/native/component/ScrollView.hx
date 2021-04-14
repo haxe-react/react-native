@@ -8,6 +8,7 @@ extern class ScrollView extends ReactComponentOfProps<ScrollViewProps> {
 	function scrollTo(options:{?x:Float, ?y:Float, ?animated:Bool}):Void;
 	function scrollToEnd(options:{?animated:Bool}):Void;
 	function getScrollResponder():ScrollResponder;
+	function flashScrollIndicators():Void;
 }
 
 extern class ScrollResponder {
