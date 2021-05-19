@@ -3,6 +3,7 @@ package react.native.component.props;
 import haxe.Constraints;
 import haxe.extern.EitherType;
 import react.native.component.types.ImagePropsTypes;
+import react.native.component.types.EventTypes;
 import react.ReactComponent.ReactFragment;
 import react.BaseProps;
 
@@ -28,4 +29,5 @@ typedef ImageProps = {
 	?defaultSource:{uri:String, width:Int, height:Int, scale:Float}, // TODO: number - Opaque type returned by something like require('./image.jpg')
 	?onPartialLoad:Function,
 	?onProgress:Function,
+	?pointerEvents:PointEventTypes
 }
