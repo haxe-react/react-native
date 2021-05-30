@@ -10,8 +10,9 @@ import haxe.Constraints;
 extern class Animated {
 	static inline var View = AnimatedView;
 	static inline var ScrollView = AnimatedScrollView;
-	static inline var Text = AnimatedText;
 	static inline var Image = AnimatedImage;
+	static inline var Text = AnimatedText;
+	static inline var FlatList = AnimatedFlatList;
 	
 	static function decay(value:EitherType<AnimatedValue, AnimatedValueXY>, config:DecayAnimationConfig):CompositeAnimation;
 	static function timing(value:EitherType<AnimatedValue, AnimatedValueXY>, config:TimingAnimationConfig):CompositeAnimation;
@@ -79,6 +80,11 @@ extern class AnimatedView extends ReactComponentOfProps<{>AnimatedViewProps,}> {
 @:jsRequire('react-native', 'Animated.ScrollView')
 extern class AnimatedScrollView extends ReactComponentOfProps<{>ScrollViewProps,}> {
 	var _component:ScrollView;
+}
+
+@:jsRequire('react-native', 'Animated.FlatList')
+extern class AnimatedFlatList<T> extends ReactComponentOfProps<{>FlatListProps<T>,}> {
+	var _component:FlatList<T>;
 }
 
 @:jsRequire('react-native', 'Animated.Text')
