@@ -26,6 +26,7 @@ typedef ScrollViewProps = {
 	?showsVerticalScrollIndicator:Bool,
 	?stickyHeaderIndices:Array<Int>,
 	?style:ScrollViewStyle,
+	?scrollToOverflowEnabled:Bool,
 	// android
 	?endFillColor:Color,
 	?overScrollMode:OverScrollModeType,
