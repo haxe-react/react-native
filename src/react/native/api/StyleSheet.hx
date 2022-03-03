@@ -1,5 +1,6 @@
 package react.native.api;
 
+import haxe.extern.Rest;
 import haxe.macro.Context;
 import haxe.macro.Expr;
 import react.native.component.props.*;
@@ -14,6 +15,7 @@ extern class StyleSheet {
 	
 	@:native('create') @:noCompletion static function _create<T>(obj:T):T;
 	@:native('flatten') @:noCompletion static function _flatten<T>(a:Array<T>):T;
+	static function compose<T>(args:Rest<T>):T;
 	
 	static inline macro function create(e:Expr):ExprOf<Dynamic<Int>> {
 		var p = new haxe.macro.Printer();
